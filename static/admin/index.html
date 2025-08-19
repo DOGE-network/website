@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conservative Technology Group - Content Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: #61dafb;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .content-card h3 {
+            color: #61dafb;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .content-card p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .edit-button {
+            background: #61dafb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .edit-button:hover {
+            background: #4dc8f0;
+        }
+        
+        .github-button {
+            background: #282c34;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .github-button:hover {
+            background: #1e2127;
+        }
+        
+        .instructions {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .instructions h2 {
+            color: #61dafb;
+            margin-bottom: 20px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Content Manager</h1>
+            <p>Edit website content easily - no technical knowledge required</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="instructions">
+            <h2>📝 How to Edit Content</h2>
+            <ol>
+                <li><strong>Click any "Edit Content" button</strong> below to open the editing interface</li>
+                <li><strong>Make your changes</strong> using the simple form fields</li>
+                <li><strong>Click "Save Changes"</strong> to update the website</li>
+                <li><strong>Changes appear instantly</strong> on the live website</li>
+            </ol>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>🎥 Meetings</h3>
+                <p>Update meeting recordings, notes, and agendas. Add new meetings, change YouTube video IDs, and edit meeting descriptions.</p>
+                <button class="edit-button" onclick="openMeetingsEditor()">Edit Meetings</button>
+                <a href="https://github.com/doge-network/doge-network-website/edit/main/docs/meetings.md" target="_blank" class="github-button">GitHub Edit</a>
+            </div>
+            
+            <div class="content-card">
+                <h3>📅 Schedule</h3>
+                <p>Update event schedules, change dates, locations, and descriptions. Add new events and modify existing ones.</p>
+                <button class="edit-button" onclick="openScheduleEditor()">Edit Schedule</button>
+                <a href="https://github.com/doge-network/doge-network-website/edit/main/docs/schedule.md" target="_blank" class="github-button">GitHub Edit</a>
+            </div>
+            
+            <div class="content-card">
+                <h3>📚 Documentation</h3>
+                <p>Edit main documentation pages, update mission statements, and modify project descriptions.</p>
+                <button class="edit-button" onclick="openDocsEditor()">Edit Docs</button>
+                <a href="https://github.com/doge-network/doge-network-website/tree/main/docs" target="_blank" class="github-button">Browse Files</a>
+            </div>
+            
+            <div class="content-card">
+                <h3>🏠 Homepage</h3>
+                <p>Update the main homepage content, mission statement, and call-to-action sections.</p>
+                <button class="edit-button" onclick="openHomepageEditor()">Edit Homepage</button>
+                <a href="https://github.com/doge-network/doge-network-website/edit/main/src/pages/index.js" target="_blank" class="github-button">GitHub Edit</a>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>📋 Meeting Notes</h3>
+                <p>Create and edit detailed meeting notes, action items, and follow-up tasks.</p>
+                <a href="https://github.com/doge-network/doge-network-website/tree/main/docs/meeting-notes" target="_blank" class="github-button">View Notes</a>
+            </div>
+            
+            <div class="content-card">
+                <h3>📝 Meeting Agendas</h3>
+                <p>Create and edit meeting agendas, discussion topics, and meeting schedules.</p>
+                <a href="https://github.com/doge-network/doge-network-website/tree/main/docs/meeting-agendas" target="_blank" class="github-button">View Agendas</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>Need help? Contact your technical team or refer to the documentation.</p>
+        </div>
+    </div>
+    
+    <script>
+        function openMeetingsEditor() {
+            // Open meetings editor in a new window
+            window.open('/docs/meetings', '_blank');
+        }
+        
+        function openScheduleEditor() {
+            // Open schedule editor in a new window
+            window.open('/docs/schedule', '_blank');
+        }
+        
+        function openDocsEditor() {
+            // Open documentation editor
+            window.open('/docs', '_blank');
+        }
+        
+        function openHomepageEditor() {
+            // Open homepage editor
+            window.open('/', '_blank');
+        }
+    </script>
+</body>
+</html>

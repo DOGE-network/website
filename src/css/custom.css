@@ -1,0 +1,258 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* React Native style guide colors - making them more prominent */
+  --ifm-color-primary: #61dafb !important;
+  --ifm-color-primary-dark: #4dc8f0 !important;
+  --ifm-color-primary-darker: #40c0ed !important;
+  --ifm-color-primary-darkest: #2ba8d4 !important;
+  --ifm-color-primary-light: #75e0fc !important;
+  --ifm-color-primary-lighter: #82e4fc !important;
+  --ifm-color-primary-lightest: #a8edfd !important;
+  
+  /* Secondary colors */
+  --ifm-color-secondary: #282c34 !important;
+  --ifm-color-secondary-dark: #1e2127 !important;
+  --ifm-color-secondary-darker: #1a1d22 !important;
+  --ifm-color-secondary-darkest: #15171a !important;
+  --ifm-color-secondary-light: #323741 !important;
+  --ifm-color-secondary-lighter: #363b41 !important;
+  --ifm-color-secondary-lightest: #4b5261 !important;
+  
+  /* Background colors */
+  --ifm-background-color: #ffffff !important;
+  --ifm-background-surface-color: #f8f9fa !important;
+  
+  /* Text colors */
+  --ifm-color-content: #1a1a1a !important;
+  --ifm-color-content-secondary: #666666 !important;
+  
+  /* Code styling */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(97, 218, 251, 0.1);
+  
+  /* Border radius */
+  --ifm-border-radius: 8px;
+  
+  /* Font family */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #61dafb !important;
+  --ifm-color-primary-dark: #4dc8f0 !important;
+  --ifm-color-primary-darker: #40c0ed !important;
+  --ifm-color-primary-darkest: #2ba8d4 !important;
+  --ifm-color-primary-light: #75e0fc !important;
+  --ifm-color-primary-lighter: #82e4fc !important;
+  --ifm-color-primary-lightest: #a8edfd !important;
+  
+  /* Dark mode background */
+  --ifm-background-color: #1a1a1a !important;
+  --ifm-background-surface-color: #2d2d2d !important;
+  
+  /* Dark mode text */
+  --ifm-color-content: #ffffff !important;
+  --ifm-color-content-secondary: #cccccc !important;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(97, 218, 251, 0.2);
+}
+
+/* Force React Native primary color on navbar */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--ifm-background-color) !important;
+}
+
+.navbar__title {
+  font-weight: 600 !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Force React Native primary color on buttons */
+.button--primary {
+  background-color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-primary) !important;
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
+}
+
+.button--secondary {
+  background-color: var(--ifm-color-secondary) !important;
+  border-color: var(--ifm-color-secondary) !important;
+  color: white !important;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark) !important;
+  border-color: var(--ifm-color-secondary-dark) !important;
+}
+
+/* Force React Native primary color on links */
+a {
+  color: var(--ifm-color-primary) !important;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark) !important;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-color-secondary) !important;
+  border-top: 1px solid var(--ifm-color-secondary-lighter) !important;
+}
+
+/* Custom styles for Doge Network */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__title {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.footer {
+  background-color: var(--ifm-color-secondary);
+  border-top: 1px solid var(--ifm-color-secondary-lighter);
+}
+
+/* Button styling */
+.button {
+  background-color: var(--ifm-color-primary);
+  border: none;
+  border-radius: var(--ifm-border-radius);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Card styling */
+.card {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin: 16px 0;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+/* Force React Native colors on all primary elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Override any conflicting Docusaurus default styles */
+.hero--primary {
+  background-color: var(--ifm-color-primary) !important;
+}
+
+.hero--primary .hero__title {
+  color: white !important;
+}
+
+.hero--primary .hero__subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Additional overrides to ensure React Native styling is visible */
+.navbar__brand {
+  color: var(--ifm-color-primary) !important;
+}
+
+.navbar__link {
+  color: var(--ifm-color-content) !important;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Force React Native colors on all interactive elements */
+.menu__link:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+.menu__link--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Ensure buttons use React Native colors */
+.btn--primary {
+  background-color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-primary) !important;
+}
+
+.btn--primary:hover {
+  background-color: var(--ifm-color-primary-dark) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
+}
+
+.btn--secondary {
+  background-color: var(--ifm-color-secondary) !important;
+  border-color: var(--ifm-color-secondary) !important;
+  color: white !important;
+}
+
+.btn--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark) !important;
+  border-color: var(--ifm-color-secondary-dark) !important;
+}
+
+/* Override any remaining default colors */
+:root {
+  --ifm-color-emphasis-0: var(--ifm-color-primary) !important;
+  --ifm-color-emphasis-100: var(--ifm-color-primary-light) !important;
+  --ifm-color-emphasis-200: var(--ifm-color-primary-lighter) !important;
+  --ifm-color-emphasis-300: var(--ifm-color-primary-lightest) !important;
+  --ifm-color-emphasis-400: var(--ifm-color-primary) !important;
+  --ifm-color-emphasis-500: var(--ifm-color-primary) !important;
+  --ifm-color-emphasis-600: var(--ifm-color-primary-dark) !important;
+  --ifm-color-emphasis-700: var(--ifm-color-primary-darker) !important;
+  --ifm-color-emphasis-800: var(--ifm-color-primary-darkest) !important;
+  --ifm-color-emphasis-900: var(--ifm-color-primary-darkest) !important;
+}
