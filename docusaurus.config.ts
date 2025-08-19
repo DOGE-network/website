@@ -100,19 +100,11 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Resources',
+            title: 'Docs',
             items: [
               {
-                label: 'Documentation',
+                label: 'Tutorial',
                 to: '/docs/intro',
-              },
-              {
-                label: 'Meeting Notes',
-                to: '/meetings',
-              },
-              {
-                label: 'Schedule',
-                to: '/schedule',
               },
             ],
           },
@@ -120,12 +112,16 @@ const config: Config = {
             title: 'Community',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/doge-network/doge-network-website',
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'About Us',
-                to: '/about',
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/7uEr4Ce',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -137,25 +133,28 @@ const config: Config = {
                 to: '/blog',
               },
               {
-                label: 'Edit this page on GitHub',
-                href: 'https://github.com/doge-network/doge-network-website/tree/main/',
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DOGE Network. Supporting government transparency through collaboration.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      // React Native style guide colors
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-    },
+  } satisfies Preset.ThemeConfig,
+
+  // Client-side environment variables
+  clientModules: [require.resolve('./src/clientEnv.js')],
+  
+  // Expose environment variables to the client through customFields
+  customFields: {
+    githubClientId: process.env.GITHUB_CLIENT_ID || '',
+    githubRedirectUri: process.env.GITHUB_REDIRECT_URI || '',
+  },
 };
 
 export default config;
