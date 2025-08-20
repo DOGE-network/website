@@ -68,8 +68,3 @@ Ready to contribute to government transparency? Join our next meeting and help s
 - [How to Record Meetings](/docs/guidelines/recording)
 - [Video Upload Process](/docs/guidelines/upload)
 - [Privacy Considerations](/docs/guidelines/privacy)
-
-### 📅 Scheduling
-- [Meeting Calendar](/docs/calendar)
-- [Room Reservations](/docs/rooms)
-- [Time Zone Converter](/docs/timezone)
