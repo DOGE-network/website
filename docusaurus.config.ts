@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'doge-network', // Usually your GitHub org/user name.
-  projectName: 'doge-network-website', // Usually your repo name.
+  organizationName: 'dogenetwork', // Usually your GitHub org/user name.
+  projectName: 'website', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/doge-network/doge-network-website/tree/main/',
+            'https://github.com/dogenetwork/website/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -56,12 +56,12 @@ const config: Config = {
 
   themeConfig: {
       // Replace with your project's social card
-      image: 'img/doge-network.png',
+      image: 'img/dogenetwork.png',
       navbar: {
         title: 'DOGE Network',
         logo: {
           alt: 'DOGE Network Logo',
-          src: 'img/doge-network.png',
+          src: 'img/dogenetwork.png',
         },
         items: [
           {
@@ -74,7 +74,7 @@ const config: Config = {
           {to: '/schedule', label: 'Schedule', position: 'left'},
 
           {
-            href: 'https://github.com/doge-network/doge-network-website',
+            href: 'https://github.com/dogenetwork/website',
             label: 'Edit /docs content on GitHub',
             position: 'right',
           },
