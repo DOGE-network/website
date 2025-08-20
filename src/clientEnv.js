@@ -11,8 +11,9 @@ if (typeof window !== 'undefined') {
 
   // Pass environment variables from Node.js to the client
   window.process.env.GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID || '';
-  window.process.env.GITHUB_REDIRECT_URI = process.env.GITHUB_REDIRECT_URI || '';
-  
+  window.process.env.GITHUB_REDIRECT_URI =
+    process.env.GITHUB_REDIRECT_URI || '';
+
   // Debug output
   console.log('Client-side environment variables:');
   console.log('GITHUB_CLIENT_ID:', window.process.env.GITHUB_CLIENT_ID);

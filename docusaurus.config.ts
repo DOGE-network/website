@@ -47,21 +47,6 @@ const config: Config = {
           editUrl:
             'https://github.com/doge-network/doge-network-website/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/doge-network/doge-network-website/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -85,13 +70,12 @@ const config: Config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/meetings', label: 'Meetings', position: 'left'},
           {to: '/schedule', label: 'Schedule', position: 'left'},
-          {to: '/admin', label: '📝 Edit Content', position: 'right'},
+
           {
             href: 'https://github.com/doge-network/doge-network-website',
-            label: 'GitHub',
+            label: 'Edit /docs content on GitHub',
             position: 'right',
           },
         ],
@@ -103,25 +87,8 @@ const config: Config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Intro',
                 to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/7uEr4Ce',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -129,12 +96,8 @@ const config: Config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/dogenetwork',
               },
             ],
           },
@@ -147,14 +110,7 @@ const config: Config = {
       },
   } satisfies Preset.ThemeConfig,
 
-  // Client-side environment variables
-  clientModules: [require.resolve('./src/clientEnv.js')],
-  
-  // Expose environment variables to the client through customFields
-  customFields: {
-    githubClientId: process.env.GITHUB_CLIENT_ID || '',
-    githubRedirectUri: process.env.GITHUB_REDIRECT_URI || '',
-  },
+
 };
 
 export default config;
