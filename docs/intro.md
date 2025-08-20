@@ -31,18 +31,12 @@ For that purpose, we have decided to start meeting in person. Possible outcome c
 
 Join our regular virtual meetings and biannual face-to-face gatherings:
 
-- **Monthly Check-ins**: Virtual meetings to discuss progress and coordinate
-- **AmericaFest**: Spring gathering for strategic planning
-- **CPAC**: Fall gathering for strategic planning
+- **Weekly Check-ins**: Virtual meetings to discuss progress and coordinate
+- **AmericaFest**: Winter gathering for strategic planning
+- **CPAC**: Summer gathering for strategic planning
 
 ### Get Involved
 
 - Watch recorded meetings on our [Meetings page](/meetings)
 - View upcoming events on our [Schedule page](/schedule)
 - Learn more about us on our [About page](/about)
-
-## Start Exploring
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open any of our documentation files and edit some lines: the site **reloads automatically** and displays your changes.

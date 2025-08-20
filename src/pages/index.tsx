@@ -52,7 +52,7 @@ function MissionSection() {
                 color: 'var(--ifm-color-primary)',
               }}
             >
-              Our Mission
+              Our Purpose
             </h2>
             <div className='card'>
               <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>
@@ -61,17 +61,6 @@ function MissionSection() {
                 projects that we would do for free, it would be nice to get
                 collaboration across many similar projects to help push forward.
                 For that purpose, we have decided to start meeting in person.
-              </p>
-              <p
-                style={{
-                  fontSize: '1.2rem',
-                  lineHeight: '1.6',
-                  margin: '16px 0 0 0',
-                }}
-              >
-                Possible outcome could be to form a nonprofit organization to
-                help with organizing and supporting projects. It would be self
-                organizing and classified as a 501(c) for federal tax purposes.
               </p>
             </div>
           </div>
