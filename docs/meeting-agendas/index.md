@@ -9,7 +9,7 @@ sidebar_position: 1
 **Meeting Title:** Weekly  
 **Date:** 23 Aug 2025  
 **Time:** 09:00 PT  
-**Location:** Google Meet
+**Location:** Google Meet https://meet.google.com/cps-xhxz-khf
 
 ## Meeting Objectives
 
