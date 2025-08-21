@@ -135,7 +135,7 @@ function GetInvolved() {
           Get Involved
         </h2>
         <div className='row'>
-          <div className='col col--4'>
+          <div className='col col--3'>
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📹 Watch Meetings</h3>
               <p>View our recorded meetings and discussions on YouTube.</p>
@@ -144,7 +144,7 @@ function GetInvolved() {
               </Link>
             </div>
           </div>
-          <div className='col col--4'>
+          <div className='col col--3'>
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📝 Meeting Notes</h3>
               <p>Access detailed notes and action items from our meetings.</p>
@@ -153,12 +153,21 @@ function GetInvolved() {
               </Link>
             </div>
           </div>
-          <div className='col col--4'>
+          <div className='col col--3'>
             <div className='card' style={{ textAlign: 'center' }}>
-              <h3>📅 Join Schedule</h3>
-              <p>Participate in upcoming meetings and events.</p>
+              <h3>📅 View Schedule</h3>
+              <p>See our detailed event schedule and information.</p>
               <Link className='button' to='/schedule'>
                 View Schedule
+              </Link>
+            </div>
+          </div>
+          <div className='col col--3'>
+            <div className='card' style={{ textAlign: 'center' }}>
+              <h3>🗓️ Events Calendar</h3>
+              <p>Browse all events in an interactive calendar view.</p>
+              <Link className='button' to='/calendar'>
+                Open Calendar
               </Link>
             </div>
           </div>
