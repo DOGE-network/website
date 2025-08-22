@@ -2,12 +2,21 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// Load environment variables from .env.local
+require('dotenv').config({ path: '.env.local' });
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'Conservative Technology Group',
   tagline: 'Collaborating on commmon projects',
   favicon: 'img/favicon.ico',
+
+  // Pass environment variables to client-side
+  customFields: {
+    googleCalendarApiKey: process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY,
+    googleCalendarId: process.env.REACT_APP_GOOGLE_CALENDAR_ID,
+  },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -57,6 +66,12 @@ const config: Config = {
   themeConfig: {
       // Replace with your project's social card
       image: 'img/doge-network.png',
+      docs: {
+        sidebar: {
+          hideable: false, // Prevents hiding the sidebar
+          autoCollapseCategories: false, // Prevents auto-collapsing categories
+        },
+      },
       navbar: {
         title: 'DOGE Network',
         logo: {
@@ -64,15 +79,10 @@ const config: Config = {
           src: 'img/doge-network.png',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
-          },
+          {to: '/docs/', label: 'Documentation', position: 'left'},
           {to: '/meetings', label: 'Meetings', position: 'left'},
           {to: '/schedule', label: 'Schedule', position: 'left'},
-
+          {to: '/calendar', label: 'Calendar', position: 'left'},
           {
             href: 'https://github.com/doge-network/website',
             label: 'Edit /docs content on GitHub',
@@ -84,17 +94,27 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
             items: [
               {
-                label: 'Intro',
-                to: '/docs/intro',
+                label: 'About',
+                to: '/about',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
+              {
+                label: 'Documentation',
+                to: '/docs/',
+              },
+              {
+                label: 'Meetings',
+                to: '/meetings',
+              },
+              {
+                label: 'Schedule',
+                to: '/schedule',
+              },
+              {
+                label: 'Calendar',
+                to: '/calendar',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/doge-network',
@@ -102,7 +122,7 @@ const config: Config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Conservative Technology Group. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

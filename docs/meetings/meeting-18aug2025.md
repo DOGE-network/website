@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # 18 Aug 2025 First Meeting
 
 # agenda

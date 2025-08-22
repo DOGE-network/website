@@ -5,7 +5,7 @@ sidebar_position: 2
 # Meetings
 
 ## Next Meeting
-- [Weekly 23 Aug 2025](/docs/meeting-agendas/)
+- [Weekly 23 Aug 2025](/docs/meetings/meeting-23aug2025.md)
 
 ## Latest Meeting Recording
 
@@ -15,7 +15,7 @@ sidebar_position: 2
 **Duration:** 75 minutes  
 **Description:** Our inaugural meeting discussing the formation of the Conservative Technology Group and plans for government transparency projects.
 **Topic:** Kickoff meeting discussing network formation and initial project ideas.  
-**Notes:** [View Full Notes](/docs/meeting-notes/18-aug-2025.md)
+**Notes:** [View Full Notes](/docs/meetings/meeting-18aug2025.md)
 
 <iframe
   src="https://www.youtube.com/embed/GQs90jH7Yc8?si=Q3nCpwFVotJVEe5w"
