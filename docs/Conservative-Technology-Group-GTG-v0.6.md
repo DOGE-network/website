@@ -1,5 +1,7 @@
 ### Conservative Technology Group (CTG) Early Draft
 
+## [Americafest 2025 doc replaces this](americafest-2025.md) 
+
 ### Overview
 
 We individually are supporting various projects related to government transparency. While these are generally passion projects that we would do for free, it would be nice to get collaboration across many similar projects to help push forward. For that purpose, we have decided to start meeting in person. Possible outcome could be to form a nonprofit organization to help with organizing and supporting projects. It would be self organizing and classified as a 501(c) for federal tax purposes. 
@@ -65,7 +67,7 @@ We may get organized enough that we decide creating a nonprofit to manage the op
 - Utilizing open data transparency to expose and reduce waste, fraud and abuse of the government treasury.  
 - Tracking the money flows between nongovernmental organizations (NGOs) that influence governments and inevitably direct policy, laws and regulations.   
 - Defray legal, tooling, equipment and infrastructure costs  
-- Umbrella for “volunteer” credit.  
+- Umbrella for "volunteer" credit.  
 - Core activities  
   - Data transparency tools  
   - Investigative reporting  

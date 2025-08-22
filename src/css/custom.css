@@ -99,6 +99,21 @@
   border-color: var(--ifm-color-secondary-dark) !important;
 }
 
+/* Client Carousel hover effects */
+#clients .hover-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#clients a:hover .hover-overlay {
+  opacity: 1;
+}
+
+#clients a:hover > div {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
 /* Force React Native primary color on links */
 a {
   color: var(--ifm-color-primary) !important;

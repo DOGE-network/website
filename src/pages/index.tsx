@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ClientCarousel from '@site/src/components/ClientCarousel';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -42,9 +43,18 @@ function MissionSection() {
         color: 'var(--ifm-color-content)',
       }}
     >
-      <div className='container'>
-        <div className='row'>
-          <div className='col col--8 col--offset--2'>
+      <div
+        className='container'
+        style={{ display: 'flex', justifyContent: 'center' }}
+      >
+        <div
+          className='row'
+          style={{ width: '100%', justifyContent: 'center' }}
+        >
+          <div
+            className='col col--8'
+            style={{ margin: '0 auto', float: 'none' }}
+          >
             <h2
               style={{
                 textAlign: 'center',
@@ -111,6 +121,30 @@ function UpcomingEvents() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ClientsSection() {
+  return (
+    <section
+      style={{
+        padding: '10px 0',
+        background: 'var(--ifm-background-surface-color)',
+      }}
+    >
+      <div className='container'>
+        <h2
+          style={{
+            textAlign: 'center',
+            marginBottom: '48px',
+            color: 'var(--ifm-color-primary)',
+          }}
+        >
+          Projects
+        </h2>
+        <ClientCarousel />
       </div>
     </section>
   );
@@ -187,6 +221,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <MissionSection />
+        <ClientsSection />
         <UpcomingEvents />
         <GetInvolved />
         <HomepageFeatures />
