@@ -125,7 +125,7 @@ export default function ClientCarousel() {
                         <img
                           src={client.logo}
                           alt={client.name}
-                          style={{ height: '64px', width: 'auto', objectFit: 'contain' }}
+                          style={{ height: '96px', width: 'auto', objectFit: 'contain' }}
                         />
                       </CardContent>
                     </Card>
