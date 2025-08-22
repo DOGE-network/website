@@ -182,23 +182,6 @@ export default function Calendar(): React.ReactElement {
                 Download iCal
               </a>
             </div>
-            <div style={{
-              marginTop: '16px',
-              padding: '12px',
-              background: 'white',
-              borderRadius: '6px',
-              border: '1px solid var(--ifm-color-emphasis-200)'
-            }}>
-              <p style={{
-                margin: '0',
-                fontSize: '0.9rem',
-                color: 'var(--ifm-color-content-secondary)',
-                fontFamily: 'monospace',
-                wordBreak: 'break-all'
-              }}>
-                Calendar ID: ddfe038179a090c874c069ed44ef9ebd79d37cb47d9b17a87ec7e2f2550457e5@group.calendar.google.com
-              </p>
-            </div>
           </div>
 
           <div
