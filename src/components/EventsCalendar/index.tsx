@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Event, events, getEventsByMonth } from '../../data/events';
+import React, { useState, useEffect } from 'react';
+import { Event, fetchGoogleCalendarEvents, getGoogleEventsByMonth } from '../../data/events';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const MONTHS = [
   'January',
@@ -28,15 +29,64 @@ export default function EventsCalendar({
   showHeader = true,
   compact = false,
 }: EventsCalendarProps): React.ReactElement {
+  const { siteConfig } = useDocusaurusContext();
   const today = new Date();
   const [currentDate, setCurrentDate] = useState(
     new Date(today.getFullYear(), today.getMonth(), 1)
   );
   const [view, setView] = useState<'calendar' | 'list'>('calendar');
+  const [allEvents, setAllEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
-  const monthEvents = getEventsByMonth(year, month);
+
+  // Fetch Google Calendar events
+  useEffect(() => {
+    const loadEvents = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        // Get Google Calendar events if API credentials are available
+        const apiKey = siteConfig.customFields?.googleCalendarApiKey as string;
+        const calendarId = siteConfig.customFields?.googleCalendarId as string;
+        
+        if (apiKey && calendarId) {
+          const googleEvents = await fetchGoogleCalendarEvents(apiKey, calendarId);
+          setAllEvents(googleEvents);
+        } else {
+          setAllEvents([]);
+        }
+      } catch (err) {
+        setError('Failed to load calendar events');
+        console.error('Error loading events:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEvents();
+  }, [siteConfig]);
+
+  // Filter events for the current month view
+  const monthEvents = allEvents.filter(event => {
+    const eventDate = new Date(event.date);
+    const eventEndDate = event.endDate ? new Date(event.endDate) : null;
+    
+    // Check if event starts in this month
+    const startsInMonth = eventDate.getFullYear() === year && eventDate.getMonth() === month;
+    
+    // Check if event ends in this month
+    const endsInMonth = eventEndDate && eventEndDate.getFullYear() === year && eventEndDate.getMonth() === month;
+    
+    // Check if event spans across this month
+    const spansMonth = eventEndDate && 
+      eventDate.getTime() <= new Date(year, month + 1, 0).getTime() && 
+      eventEndDate.getTime() >= new Date(year, month, 1).getTime();
+    
+    return startsInMonth || endsInMonth || spansMonth;
+  });
 
   const firstDayOfMonth = new Date(year, month, 1);
   const lastDayOfMonth = new Date(year, month + 1, 0);
@@ -44,11 +94,13 @@ export default function EventsCalendar({
   const daysInMonth = lastDayOfMonth.getDate();
 
   const navigateMonth = (direction: 'prev' | 'next') => {
-    setCurrentDate(new Date(year, month + (direction === 'next' ? 1 : -1), 1));
+    const newDate = new Date(year, month + (direction === 'next' ? 1 : -1), 1);
+    setCurrentDate(newDate);
   };
 
   const goToToday = () => {
-    setCurrentDate(new Date(today.getFullYear(), today.getMonth(), 1));
+    const todayDate = new Date(today.getFullYear(), today.getMonth(), 1);
+    setCurrentDate(todayDate);
   };
 
   const getEventsForDay = (day: number): Event[] => {
@@ -84,6 +136,8 @@ export default function EventsCalendar({
         return '#95a5a6';
       case 'virtual':
         return '#9b59b6';
+      case 'google':
+        return '#4285f4'; // Google blue
       default:
         return '#34495e';
     }
@@ -150,50 +204,80 @@ export default function EventsCalendar({
   };
 
   const renderListView = () => {
-    const upcomingEvents = events
-      .filter(event => new Date(event.date) >= today)
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-      .slice(0, 20);
+    // Show all events for the current month in list view
+    const monthEventsSorted = monthEvents.sort((a, b) => 
+      new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
 
     return (
       <div className={styles.listView}>
-        {upcomingEvents.map(event => (
-          <div key={event.id} className={styles.eventListItem}>
-            <div
-              className={styles.eventTypeIndicator}
-              style={{ backgroundColor: getEventTypeColor(event.type) }}
-            ></div>
-            <div className={styles.eventDetails}>
-              <h4 className={styles.eventTitle}>
-                {event.url ? (
-                  <a
-                    href={event.url}
-                    target={event.url.startsWith('http') ? '_blank' : '_self'}
-                  >
-                    {event.title}
-                  </a>
-                ) : (
-                  event.title
-                )}
-              </h4>
-              <div className={styles.eventMeta}>
-                <span className={styles.eventDate}>
-                  {formatDate(event.date)}
-                  {event.endDate && ` - ${formatDate(event.endDate)}`}
-                </span>
-                {event.location && (
-                  <span className={styles.eventLocation}>{event.location}</span>
+        {monthEventsSorted.length === 0 ? (
+          <div className={styles.noEvents}>
+            <p>No events scheduled for {MONTHS[month]} {year}</p>
+          </div>
+        ) : (
+          monthEventsSorted.map(event => (
+            <div key={event.id} className={styles.eventListItem}>
+              <div
+                className={styles.eventTypeIndicator}
+                style={{ backgroundColor: getEventTypeColor(event.type) }}
+              ></div>
+              <div className={styles.eventDetails}>
+                <h4 className={styles.eventTitle}>
+                  {event.title}
+                  {event.url && (
+                    <span className={styles.meetingUrl}>
+                      {' '} -- <a
+                        href={event.url}
+                        target={event.url.startsWith('http') ? '_blank' : '_self'}
+                      >
+                        {event.url}
+                      </a>
+                    </span>
+                  )}
+                </h4>
+                <div className={styles.eventMeta}>
+                  <span className={styles.eventDate}>
+                    {formatDate(event.date)}
+                    {event.endDate && ` - ${formatDate(event.endDate)}`}
+                  </span>
+                  {event.location && (
+                    <span className={styles.eventLocation}>{event.location}</span>
+                  )}
+                </div>
+                {event.description && (
+                  <p className={styles.eventDescription}>{event.description}</p>
                 )}
               </div>
-              {event.description && (
-                <p className={styles.eventDescription}>{event.description}</p>
-              )}
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     );
   };
+
+  if (loading) {
+    return (
+      <div className={styles.eventsCalendar}>
+        <div className={styles.loadingState}>
+          <p>Loading calendar events...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.eventsCalendar}>
+        <div className={styles.errorState}>
+          <p>Error: {error}</p>
+          <button onClick={() => window.location.reload()} className={styles.retryButton}>
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.eventsCalendar}>
@@ -245,23 +329,15 @@ export default function EventsCalendar({
           <div className={styles.legendItem}>
             <div
               className={styles.legendColor}
-              style={{ backgroundColor: '#e74c3c' }}
+              style={{ backgroundColor: '#4285f4' }}
             ></div>
-            <span>Biannual Events</span>
+            <span>Google Calendar Events</span>
           </div>
           <div className={styles.legendItem}>
-            <div
-              className={styles.legendColor}
-              style={{ backgroundColor: '#3498db' }}
-            ></div>
-            <span>Weekly Meetings</span>
+            <span>Events in {MONTHS[month]}: {monthEvents.length}</span>
           </div>
           <div className={styles.legendItem}>
-            <div
-              className={styles.legendColor}
-              style={{ backgroundColor: '#95a5a6' }}
-            ></div>
-            <span>Optional Events</span>
+            <span>Total Events: {allEvents.length}</span>
           </div>
         </div>
       )}

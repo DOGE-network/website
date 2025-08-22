@@ -52,18 +52,21 @@
 }
 
 .todayButton {
-  background: var(--ifm-color-secondary);
-  color: var(--ifm-color-secondary-contrast-foreground);
+  background: var(--ifm-color-primary);
+  color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 500;
   transition: background-color 0.2s;
 }
 
 .todayButton:hover {
-  background: var(--ifm-color-secondary-dark);
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .viewToggle {
@@ -74,13 +77,14 @@
 }
 
 .viewButton {
-  background: var(--ifm-background-color);
+  background: white;
   color: var(--ifm-color-content);
   border: none;
   padding: 8px 16px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.2s;
+  font-weight: 500;
+  transition: all 0.2s;
   border-right: 1px solid var(--ifm-color-emphasis-300);
 }
 
@@ -90,6 +94,7 @@
 
 .viewButton:hover {
   background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
 }
 
 .viewButton.active {
@@ -210,6 +215,8 @@
 
 .eventDetails {
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .eventTitle {
@@ -226,6 +233,21 @@
 
 .eventTitle a:hover {
   color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+.meetingUrl {
+  font-weight: normal;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+}
+
+.meetingUrl a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.meetingUrl a:hover {
   text-decoration: underline;
 }
 
@@ -254,7 +276,25 @@
   margin: 0;
   color: var(--ifm-color-content-secondary);
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.noEvents {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--ifm-color-content-secondary);
+  background: var(--ifm-color-emphasis-50);
+  border-radius: 8px;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+}
+
+.noEvents p {
+  margin: 0;
+  font-size: 1.1rem;
 }
 
 .legend {
@@ -341,4 +381,13 @@
   .dayEvent {
     font-size: 0.65rem;
   }
+}
+
+/* Calendar page button overrides */
+.calendar-page-button {
+  color: white !important;
+}
+
+.calendar-page-button:hover {
+  color: white !important;
 }

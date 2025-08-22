@@ -1,6 +1,6 @@
 ### Conservative Technology Group (CTG) Early Draft
 
-## [Americafest 2025 doc replaces this](americafest-2025.md) 
+## [Americafest 2025 doc replaces this](/events/americafest-2025.md) 
 
 ### Overview
 

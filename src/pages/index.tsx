@@ -23,7 +23,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className='button button--secondary button--lg'
-            to='/docs/intro'
+            to='/about'
             style={{ marginLeft: '16px' }}
           >
             Learn More 📚
@@ -103,7 +103,10 @@ function UpcomingEvents() {
                 Biannual face-to-face gathering to plan the next 6 months of
                 work.
               </p>
-              <Link className='button' to='/schedule'>
+              <Link 
+                className='button' 
+                to='/schedule'
+              >
                 View Schedule
               </Link>
             </div>
@@ -115,7 +118,10 @@ function UpcomingEvents() {
                 Biannual face-to-face gathering to plan the next 6 months of
                 work.
               </p>
-              <Link className='button' to='/schedule'>
+              <Link 
+                className='button' 
+                to='/schedule'
+              >
                 View Schedule
               </Link>
             </div>
@@ -191,7 +197,10 @@ function GetInvolved() {
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📅 View Schedule</h3>
               <p>See our detailed event schedule and information.</p>
-              <Link className='button' to='/schedule'>
+              <Link 
+                className='button' 
+                to='/schedule'
+              >
                 View Schedule
               </Link>
             </div>

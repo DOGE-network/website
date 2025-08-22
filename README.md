@@ -43,12 +43,26 @@ cd doge-network-website
 npm install
 ```
 
-3. Start the development server:
+3. Set up environment variables:
+```bash
+# Create .env.local file for development
+cp env.example .env.local
+```
+
+Edit `.env.local` and add your API keys:
+```bash
+# Google Calendar API (must be prefixed with REACT_APP_ for Docusaurus)
+REACT_APP_GOOGLE_CALENDAR_API_KEY=your_google_calendar_api_key_here
+REACT_APP_GOOGLE_CALENDAR_ID=your_google_calendar_id_here
+
+```
+
+4. Start the development server:
 ```bash
 npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Building for Production
 
@@ -60,11 +74,30 @@ The built files will be in the `build` directory.
 
 ### Deployment
 
+#### GitHub Pages
 ```bash
 npm run deploy
 ```
 
 This will deploy to GitHub Pages (configured in `docusaurus.config.js`).
+
+#### Vercel (Recommended)
+For production deployment with environment variables:
+
+1. Connect your repository to Vercel
+2. In Vercel dashboard, go to Project Settings > Environment Variables
+3. Add the following environment variables:
+   - `REACT_APP_GOOGLE_CALENDAR_API_KEY` - Your Google Calendar API key
+   - `REACT_APP_GOOGLE_CALENDAR_ID` - Your Google Calendar ID
+4. Deploy automatically triggers on git push to main branch
+
+#### Environment Variables Setup
+
+**For Google Calendar API:**
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Enable Google Calendar API for your project
+3. Create an API Key with Calendar API access
+4. Restrict the key to your domain for security in production
 
 ## Project Structure
 

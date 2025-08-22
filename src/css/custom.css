@@ -129,6 +129,31 @@ a:hover {
   border-top: 1px solid var(--ifm-color-secondary-lighter) !important;
 }
 
+/* Footer links with pipe separators */
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer__links .footer__link-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__links .footer__link-item:not(:last-child)::after {
+  content: '|';
+  margin: 0 8px;
+  color: var(--ifm-color-secondary-lighter);
+  font-weight: 300;
+}
+
+.footer__links .footer__link-item:last-child::after {
+  display: none;
+}
+
 /* Custom styles for Doge Network */
 .navbar {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -149,7 +174,7 @@ a:hover {
   background-color: var(--ifm-color-primary);
   border: none;
   border-radius: var(--ifm-border-radius);
-  color: white;
+  color: white !important;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
@@ -160,6 +185,19 @@ a:hover {
 .button:hover {
   background-color: var(--ifm-color-primary-dark);
   transform: translateY(-1px);
+}
+
+/* Force white text on all buttons */
+.button,
+.button a,
+a.button {
+  color: white !important;
+}
+
+/* Override link color for buttons specifically */
+.card .button,
+.card a.button {
+  color: white !important;
 }
 
 /* Card styling */
@@ -702,3 +740,33 @@ h6 {
   border-color: var(--ifm-color-emphasis-600);
   color: var(--ifm-color-emphasis-100);
 }
+
+/* Position DOGE branding to the right of sidebar */
+.doge-sidebar-branding {
+  position: fixed;
+  left: 300px; /* Adjust based on your sidebar width */
+  top: 60px; /* Adjust based on your header height */
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Dark theme support */
+[data-theme='dark'] .doge-sidebar-branding {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .doge-sidebar-branding {
+    display: none; /* Hide on mobile when sidebar is hidden */
+  }
+}
+
+

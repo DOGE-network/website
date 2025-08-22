@@ -5,13 +5,91 @@ export interface Event {
   date: string;
   endDate?: string;
   location?: string;
-  type: 'biannual' | 'weekly' | 'optional' | 'virtual';
+  type: 'biannual' | 'weekly' | 'optional' | 'virtual' | 'google';
   description?: string;
   url?: string;
   duration?: string;
+  // Google Calendar specific fields
+  htmlLink?: string;
+  hangoutLink?: string;
+  source?: 'google' | 'local';
+}
+
+// Google Calendar API response types
+export interface GoogleCalendarEvent {
+  id: string;
+  summary: string;
+  description?: string;
+  start: {
+    dateTime?: string;
+    date?: string;
+    timeZone?: string;
+  };
+  end: {
+    dateTime?: string;
+    date?: string;
+    timeZone?: string;
+  };
+  location?: string;
+  htmlLink: string;
+  hangoutLink?: string;
+  status: string;
+}
+
+export interface GoogleCalendarResponse {
+  items: GoogleCalendarEvent[];
+  nextPageToken?: string;
+  error?: {
+    code: number;
+    message: string;
+  };
 }
 
 export const events: Event[] = [
+  // Past Events (2024)
+  {
+    id: 'cpac-2024',
+    title: 'CPAC 2024',
+    date: '2024-02-21',
+    endDate: '2024-02-24',
+    location: 'National Harbor, MD',
+    type: 'biannual',
+    description: 'Conservative Political Action Conference - Strategic planning and networking',
+    url: 'https://cpac2024.conservative.org/',
+    duration: '4 days',
+  },
+  {
+    id: 'ces-2024',
+    title: 'CES 2024',
+    date: '2024-01-09',
+    endDate: '2024-01-12',
+    location: 'Las Vegas',
+    type: 'optional',
+    description: 'Consumer Electronics Show - Technology innovation and trends',
+    url: 'https://www.ces.tech/',
+    duration: '4 days',
+  },
+  {
+    id: 'microsoft-build-2024',
+    title: 'Microsoft Build 2024',
+    date: '2024-05-21',
+    endDate: '2024-05-23',
+    type: 'optional',
+    description: "Microsoft's flagship annual developer conference",
+    url: 'https://build.microsoft.com/',
+    duration: '3 days',
+  },
+  {
+    id: 'aws-reinvent-2024',
+    title: 'AWS re:Invent 2024',
+    date: '2024-11-25',
+    endDate: '2024-11-29',
+    location: 'Las Vegas',
+    type: 'optional',
+    description: "Amazon Web Services' premier annual cloud tech conference",
+    url: 'https://reinvent.awsevents.com/',
+    duration: '5 days',
+  },
   // Main DOGE Network Events
   {
     id: 'americafest-2025',
@@ -44,18 +122,49 @@ export const events: Event[] = [
       'Regular virtual meeting to discuss progress and coordinate projects',
     url: '/docs/meetings',
   },
-  // Optional events from 2025
+  // Specific weekly meetings for August 2025
   {
-    id: 'ces-2025',
-    title: 'CES (Consumer Electronics Show)',
-    date: '2025-01-07',
-    endDate: '2025-01-10',
-    location: 'Las Vegas',
-    type: 'optional',
-    description:
-      'Major annual consumer electronics and technology innovation show',
-    url: 'https://www.ces.tech/',
+    id: 'weekly-meeting-aug-7',
+    title: 'Weekly Check-in',
+    date: '2025-08-07',
+    type: 'weekly',
+    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    url: '/docs/meetings',
   },
+  {
+    id: 'weekly-meeting-aug-14',
+    title: 'Weekly Check-in',
+    date: '2025-08-14',
+    type: 'weekly',
+    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    url: '/docs/meetings',
+  },
+  {
+    id: 'weekly-meeting-aug-21',
+    title: 'Weekly Check-in',
+    date: '2025-08-21',
+    type: 'weekly',
+    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    url: '/docs/meetings',
+  },
+  {
+    id: 'weekly-meeting-aug-28',
+    title: 'Weekly Check-in',
+    date: '2025-08-28',
+    type: 'weekly',
+    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    url: '/docs/meetings',
+  },
+  // August 2025 specific events
+  {
+    id: 'americafest-planning-aug-22',
+    title: 'AmericaFest 2025 Planning Meeting',
+    date: '2025-08-22',
+    type: 'biannual',
+    description: 'Follow up meeting. TBD holding these as a X space. Aladdin, twinforces and I are going to meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec. This meeting will be transcribed and recorded.',
+    url: '/docs/americafest-2025',
+  },
+  // Optional events from 2025
   {
     id: 'startup-world-cup-2025',
     title: 'Startup World Cup',
@@ -243,4 +352,98 @@ export function getUpcomingEvents(limit: number = 5): Event[] {
     .filter(event => new Date(event.date) >= now)
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .slice(0, limit);
+}
+
+// Google Calendar API functions
+const GOOGLE_CALENDAR_API_BASE = 'https://www.googleapis.com/calendar/v3';
+
+export async function fetchGoogleCalendarEvents(apiKey?: string, calendarId?: string): Promise<Event[]> {
+  if (!apiKey) {
+    console.warn('Google Calendar API key not found. Please set REACT_APP_GOOGLE_CALENDAR_API_KEY environment variable.');
+    return [];
+  }
+
+  if (!calendarId) {
+    console.warn('Google Calendar ID not found. Please set REACT_APP_GOOGLE_CALENDAR_ID environment variable.');
+    return [];
+  }
+
+  try {
+    const now = new Date();
+    const timeMin = now.toISOString();
+    // Get events for the next year
+    const timeMax = new Date(now.getFullYear() + 1, now.getMonth(), now.getDate()).toISOString();
+
+    const url = `${GOOGLE_CALENDAR_API_BASE}/calendars/${encodeURIComponent(calendarId)}/events?` +
+      `key=${apiKey}&` +
+      `timeMin=${timeMin}&` +
+      `timeMax=${timeMax}&` +
+      `singleEvents=true&` +
+      `orderBy=startTime&` +
+      `maxResults=250`;
+
+    const response = await fetch(url);
+    const data: GoogleCalendarResponse = await response.json();
+
+    if (data.error) {
+      console.error('Google Calendar API error:', data.error);
+      return [];
+    }
+
+    return data.items
+      .filter(item => item.status === 'confirmed')
+      .map(transformGoogleEventToEvent);
+  } catch (error) {
+    console.error('Error fetching Google Calendar events:', error);
+    return [];
+  }
+}
+
+function transformGoogleEventToEvent(googleEvent: GoogleCalendarEvent): Event {
+  const startDate = googleEvent.start.dateTime || googleEvent.start.date;
+  const endDate = googleEvent.end.dateTime || googleEvent.end.date;
+  
+  // Convert datetime to date string
+  const formatDate = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    return date.toISOString().split('T')[0];
+  };
+
+  const event: Event = {
+    id: googleEvent.id,
+    title: googleEvent.summary,
+    date: formatDate(startDate!),
+    type: 'google',
+    source: 'google',
+    htmlLink: googleEvent.htmlLink,
+  };
+
+  if (endDate && formatDate(endDate) !== formatDate(startDate!)) {
+    event.endDate = formatDate(endDate);
+  }
+
+  if (googleEvent.location) {
+    event.location = googleEvent.location;
+  }
+
+  if (googleEvent.description) {
+    event.description = googleEvent.description;
+  }
+
+  if (googleEvent.hangoutLink) {
+    event.hangoutLink = googleEvent.hangoutLink;
+    event.url = googleEvent.hangoutLink;
+  } else if (googleEvent.htmlLink) {
+    event.url = googleEvent.htmlLink;
+  }
+
+  return event;
+}
+
+export async function getGoogleEventsByMonth(year: number, month: number): Promise<Event[]> {
+  const allEvents = await fetchGoogleCalendarEvents();
+  return allEvents.filter(event => {
+    const eventDate = new Date(event.date);
+    return eventDate.getFullYear() === year && eventDate.getMonth() === month;
+  });
 }

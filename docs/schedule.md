@@ -48,5 +48,5 @@ Whether you want to attend our biannual gatherings or join regular virtual meeti
 
 **Next Steps:**
 1. [Join Our Next Meeting](/docs/meetings)
-2. [View Meeting Schedule](/docs/meetings)
-3. [Contact Us](/docs/contact)
+2. [Check the Calendar](/calendar)
+2. [Contact Us](/docs/contact)
