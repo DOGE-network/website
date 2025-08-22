@@ -18,6 +18,7 @@ sidebar_position: 1
 - funding the core group travel, event expenses
 - adding more projects to the site carousel
 - using the events calendar
+- if we start handling funds, then we need one of our friendly corporations to act as the bank. Managing fund donations and paying bills. 
 - Review action items from previous meeting
 
 ## Next Meeting
