@@ -91,122 +91,113 @@ export default function Calendar(): React.ReactElement {
             )}
           </div>
 
-          {/* Alternative Calendar Views */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '20px',
-            marginBottom: '40px'
+          {/* Public Calendar URL Section */}
+          <div style={{
+            background: 'var(--ifm-color-emphasis-50)',
+            borderRadius: '8px',
+            padding: '24px',
+            marginBottom: '40px',
+            border: '2px solid var(--ifm-color-primary)',
+            textAlign: 'center'
           }}>
-            {/* Month View */}
-            <div style={{
-              background: 'white',
-              borderRadius: '8px',
-              padding: '20px',
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-              textAlign: 'center'
+            <h3 style={{
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '16px',
+              fontSize: '1.3rem'
             }}>
-              <h3 style={{ color: 'var(--ifm-color-primary)', marginBottom: '10px' }}>
-                Month View
-              </h3>
-              <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '15px' }}>
-                View events in a monthly calendar format
-              </p>
+              📅 Add to Your Calendar
+            </h3>
+            <p style={{
+              color: 'var(--ifm-color-content-secondary)',
+              marginBottom: '20px',
+              fontSize: '1rem'
+            }}>
+              Subscribe to our calendar to stay updated with all DOGE Network events and meetings
+            </p>
+            <div style={{
+              display: 'flex',
+              gap: '16px',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              alignItems: 'center'
+            }}>
               <a
-                href={calendarId ? `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&mode=MONTH` : 'https://calendar.google.com'}
+                href="https://calendar.google.com/calendar/embed?src=ddfe038179a090c874c069ed44ef9ebd79d37cb47d9b17a87ec7e2f2550457e5%40group.calendar.google.com&ctz=America%2FLos_Angeles"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles['calendar-page-button']}
-                style={{ 
-                  display: 'inline-block',
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
                   padding: '12px 24px',
-                  backgroundColor: 'var(--ifm-color-primary)',
-                  color: 'white',
-                  fontWeight: '500',
+                  backgroundColor: 'white',
+                  color: 'var(--ifm-color-primary)',
+                  fontWeight: '700',
                   textDecoration: 'none',
                   borderRadius: '6px',
                   fontSize: '16px',
-                  transition: 'background-color 0.2s'
+                  border: '2px solid var(--ifm-color-primary)',
+                  transition: 'all 0.2s'
                 }}
-                onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary-dark)'}
-                onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)'}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)';
+                  (e.target as HTMLElement).style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = 'white';
+                  (e.target as HTMLElement).style.color = 'var(--ifm-color-primary)';
+                }}
               >
-                Open Month View
+                <span>📅</span>
+                View Public Calendar
+              </a>
+              <a
+                href="https://calendar.google.com/calendar/ical/ddfe038179a090c874c069ed44ef9ebd79d37cb47d9b17a87ec7e2f2550457e5%40group.calendar.google.com/public/basic.ics"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '12px 24px',
+                  backgroundColor: 'white',
+                  color: 'var(--ifm-color-primary)',
+                  fontWeight: '700',
+                  textDecoration: 'none',
+                  borderRadius: '6px',
+                  fontSize: '16px',
+                  border: '2px solid var(--ifm-color-primary)',
+                  transition: 'all 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)';
+                  (e.target as HTMLElement).style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = 'white';
+                  (e.target as HTMLElement).style.color = 'var(--ifm-color-primary)';
+                }}
+              >
+                <span>📥</span>
+                Download iCal
               </a>
             </div>
-
-            {/* Week View */}
             <div style={{
+              marginTop: '16px',
+              padding: '12px',
               background: 'white',
-              borderRadius: '8px',
-              padding: '20px',
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-              textAlign: 'center'
+              borderRadius: '6px',
+              border: '1px solid var(--ifm-color-emphasis-200)'
             }}>
-              <h3 style={{ color: 'var(--ifm-color-primary)', marginBottom: '10px' }}>
-                Week View
-              </h3>
-              <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '15px' }}>
-                See events in a weekly schedule format
+              <p style={{
+                margin: '0',
+                fontSize: '0.9rem',
+                color: 'var(--ifm-color-content-secondary)',
+                fontFamily: 'monospace',
+                wordBreak: 'break-all'
+              }}>
+                Calendar ID: ddfe038179a090c874c069ed44ef9ebd79d37cb47d9b17a87ec7e2f2550457e5@group.calendar.google.com
               </p>
-              <a
-                href={calendarId ? `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&mode=WEEK` : 'https://calendar.google.com'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['calendar-page-button']}
-                style={{ 
-                  display: 'inline-block',
-                  padding: '12px 24px',
-                  backgroundColor: 'var(--ifm-color-primary)',
-                  color: 'white',
-                  fontWeight: '500',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontSize: '16px',
-                  transition: 'background-color 0.2s'
-                }}
-                onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary-dark)'}
-                onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)'}
-              >
-                Open Week View
-              </a>
-            </div>
-
-            {/* Agenda View */}
-            <div style={{
-              background: 'white',
-              borderRadius: '8px',
-              padding: '20px',
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-              textAlign: 'center'
-            }}>
-              <h3 style={{ color: 'var(--ifm-color-primary)', marginBottom: '10px' }}>
-                Agenda View
-              </h3>
-              <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '15px' }}>
-                List all upcoming events chronologically
-              </p>
-              <a
-                href={calendarId ? `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&mode=AGENDA` : 'https://calendar.google.com'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['calendar-page-button']}
-                style={{ 
-                  display: 'inline-block',
-                  padding: '12px 24px',
-                  backgroundColor: 'var(--ifm-color-primary)',
-                  color: 'white',
-                  fontWeight: '500',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontSize: '16px',
-                  transition: 'background-color 0.2s'
-                }}
-                onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary-dark)'}
-                onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)'}
-              >
-                Open Agenda View
-              </a>
             </div>
           </div>
 
