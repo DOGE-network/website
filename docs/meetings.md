@@ -11,7 +11,7 @@ sidebar_position: 2
 
 ### Conservative Technology Group Kickoff Meeting
 
-**Date:** 18 Aug 2025  
+**Date:** 16 Aug 2025  
 **Duration:** 75 minutes  
 **Description:** Our inaugural meeting discussing the formation of the Conservative Technology Group and plans for government transparency projects.
 **Topic:** Kickoff meeting discussing network formation and initial project ideas.  
