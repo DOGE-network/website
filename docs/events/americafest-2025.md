@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# AmericaFest 2025
+# AmericaFest 2025, Public Private Parntership
 
 ## Event Overview
 
@@ -20,12 +20,27 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 - Sean Roberts [seanroberts66@gmail.com](mailto:seanroberts66@gmail.com)  
 - Pierce Wetter [pierce@twinforces.com](mailto:pierce@twinforces.com)   
 - Steven Alebadi [stevenalebadi@outlook.com](mailto:stevenalebadi@outlook.com)   
+- Regina Connell 
 
-### Tentative Schedule
+## travel, lodging
 
-**Day 1: Strategic Planning**
-- primary purpose of phoenix meeting will be to discuss, plan next 6m of projects 
-- secondary purpose will be to discuss forming a nonprofit to manage shared tech infrastructure, volunteer credit, and project expenses
+- hotel room block
+- hotel conference room(s)
+
+## infra
+
+- Regina AV
+
+### Tentative Schedule Day 1
+
+- breakfast
+- welcome talk
+- talk blocks
+- breakout talks?
+
+- objectives
+  - primary purpose of phoenix meeting will be to discuss, plan next 6m of projects 
+  - secondary purpose will be to discuss forming a nonprofit to manage shared tech infrastructure, volunteer credit, and project expenses
 
 - List of projects committed
     - California DOGE https://cali-doge.org
@@ -44,7 +59,6 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 
  ## Policy Groups we should reach out to
 
-  
 | Organization | Grant Program(s) | URL | Contact Email |
 | ----- | ----- | ----- | ----- |
 | State Policy Network | Pathways, Ed-Prize, RFPs | [https://spn.org/](https://spn.org/)  | info@spn.org |
