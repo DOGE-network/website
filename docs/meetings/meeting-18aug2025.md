@@ -1,9 +1,10 @@
 ---
+date: "18-08-2025"
 sidebar_position: 2
 ---
 # 18 Aug 2025 First Meeting
 
-# agenda
+## agenda
 
 Aladdin, twinforces and I are going to meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec
 
@@ -14,7 +15,7 @@ Aladdin, twinforces and I are going to meet and discuss meeting f2f on conservat
 
 This meeting will be transcribed and recorded
 
-# notes
+## notes
 
  **enable recording and transcription first, then turn on closed captions**
 - marc get genZ contributors
@@ -34,7 +35,7 @@ This meeting will be transcribed and recorded
 - **regina, shell co-host. sean, steven, pierce**
 - **sean will create gdoc for amerifest planning and share**
 
-# chat
+## chat
 
 00:00:07.944,00:00:10.944
 Jennica Pounds: sorry, just got the invite. I'm just listening in

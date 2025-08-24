@@ -1,4 +1,5 @@
 ---
+date: "23-08-2025"
 sidebar_position: 2
 ---
 
@@ -10,8 +11,9 @@ sidebar_position: 2
 **Date:** 23 Aug 2025  
 **Time:** 09:00 PT  
 **Location:** Google Meet https://meet.google.com/cps-xhxz-khf
+**Video** posted after meeting here
 
-## Meeting Objectives
+## agenda
 
 - meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec 2025
 - setting hotel room block to hold researvations
@@ -46,8 +48,6 @@ sidebar_position: 2
 - 
 
 
-## Next Meeting
+## chat
 
-**Next Meeting Date:** TBD  
-**Next Meeting Time:** TBD  
-**Next Meeting Location:** Google Meet or X Space 
+posted after meeting here
