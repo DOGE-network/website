@@ -3,7 +3,7 @@ date: "30-08-2025"
 sidebar_position: 2
 ---
 
-# Meeting title
+# Meeting Agenda
 
 ## Meeting Information
 
