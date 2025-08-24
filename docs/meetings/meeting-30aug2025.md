@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Meeting Information
 
-**Meeting Title:** Weekly  
+**Meeting Type:** Weekly  
 **Date:** 23 Aug 2025  
 **Time:** 09:00 PT  
 **Location:** Google Meet 
