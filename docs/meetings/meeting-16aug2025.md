@@ -2,7 +2,13 @@
 date: "18-08-2025"
 sidebar_position: 2
 ---
-# 18 Aug 2025 First Meeting
+# 16 Aug 2025 First Meeting
+
+- **Meeting Type:** Weekly  
+- **Date:** 16 Aug 2025  
+- **Time:** 09:00 PT  
+- **Location:** Google Meet https://meet.google.com/cps-xhxz-khf
+- **Video** <iframe width="560" height="315" src="https://www.youtube.com/embed/GQs90jH7Yc8?si=DRLDI0_mKAEpViVG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## agenda
 

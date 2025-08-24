@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Meeting Information
 
-**Meeting Title:** 
+**Meeting Type:** 
 **Date:**  
 **Time:**  
 **Location:** 
