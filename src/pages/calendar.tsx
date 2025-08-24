@@ -151,36 +151,6 @@ export default function Calendar(): React.ReactElement {
                 <span>📅</span>
                 View Public Calendar
               </a>
-              <a
-                href="https://calendar.google.com/calendar/ical/ddfe038179a090c874c069ed44ef9ebd79d37cb47d9b17a87ec7e2f2550457e5%40group.calendar.google.com/public/basic.ics"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '12px 24px',
-                  backgroundColor: 'white',
-                  color: 'var(--ifm-color-primary)',
-                  fontWeight: '700',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontSize: '16px',
-                  border: '2px solid var(--ifm-color-primary)',
-                  transition: 'all 0.2s'
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = 'var(--ifm-color-primary)';
-                  (e.target as HTMLElement).style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = 'white';
-                  (e.target as HTMLElement).style.color = 'var(--ifm-color-primary)';
-                }}
-              >
-                <span>📥</span>
-                Download iCal
-              </a>
             </div>
           </div>
 
