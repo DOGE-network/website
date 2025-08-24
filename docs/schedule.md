@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# Event Schedule
+# Schedule
 
 ## Biannual Face-to-Face Gatherings
 
 These major gatherings are where we plan the next 6 months of work and make strategic decisions about the Conservative Technology Group's direction.
 
-### 🇺🇸 AmericaFest
+### [🇺🇸 AmericaFest](/docs/events/americafest-2025)
 
 **Purpose:** Strategic planning session for government transparency projects  
 **Frequency:** Every 6 months  
@@ -16,9 +16,7 @@ These major gatherings are where we plan the next 6 months of work and make stra
 **Location:** TBD  
 **Duration:** 1 day
 
-[View Details](/docs/americafest-2025)
-
-### 🏛️ CPAC
+### [🏛️ CPAC](/docs/events/cpac-2026)
 
 **Purpose:** Strategic planning session for government transparency projects  
 **Frequency:** Every 6 months  
@@ -26,17 +24,13 @@ These major gatherings are where we plan the next 6 months of work and make stra
 **Location:** TBD  
 **Duration:** 1 day 
 
-[View Details](/docs/cpac-2026)
-
 ---
 
 ## Regular Virtual Meetings
 
-### 📅 Weekly Check-ins
+### [📅 Weekly Check-ins](/docs/meetings)
 
 Regular virtual meetings to discuss progress, share updates, and coordinate on ongoing projects.
-
-[Join Next Meeting](/docs/meetings)
 
 ---
 

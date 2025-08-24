@@ -1,52 +1,12 @@
 ---
-sidebar_position: 2
+title: Meetings
+sidebar_label: meetings //hidden from display in custom.css
 ---
+
+import DocCardList from '@theme/DocCardList';
 
 # Meetings
 
-## Next Meeting
-- [Weekly 23 Aug 2025](/docs/meetings/meeting-23aug2025.md)
+This page displays all meeting notes and recordings for the Conservative Technology Group.
 
-## Latest Meeting Recording
-
-### Conservative Technology Group Kickoff Meeting
-
-**Date:** 16 Aug 2025  
-**Duration:** 75 minutes  
-**Description:** Our inaugural meeting discussing the formation of the Conservative Technology Group and plans for government transparency projects.
-**Topic:** Kickoff meeting discussing network formation and initial project ideas.  
-**Notes:** [View Full Notes](/docs/meetings/meeting-18aug2025.md)
-
-<iframe
-  src="https://www.youtube.com/embed/GQs90jH7Yc8?si=Q3nCpwFVotJVEe5w"
-  title="Latest Conservative Technology Group Meeting"
-  style={{
-    width: '100%',
-    height: '400px',
-    border: 'none',
-    borderRadius: '8px'
-  }}
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen>
-</iframe>
-
----
-
-## Previous Meetings
-
-### placeholder ..
-
-
----
-
-## Join Our Next Meeting
-
-Ready to contribute to government transparency? Join our next meeting and help shape the future of the Conservative Technology Group.
-
-1. [View Meeting Schedule](/docs/schedule)
-
----
-
-## Meeting Resources
-
-- [Meeting Agenda Template](/docs/templates/meeting-agenda)
+<DocCardList category="meetings" />

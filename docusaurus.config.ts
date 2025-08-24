@@ -10,6 +10,7 @@ require('dotenv').config({ path: '.env.local' });
 const config: Config = {
   title: 'Conservative Technology Group',
   tagline: 'Collaborating on commmon projects',
+  trailingSlash: false,
   favicon: 'img/favicon.ico',
 
   // Pass environment variables to client-side

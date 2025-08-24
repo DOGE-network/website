@@ -45,6 +45,11 @@
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Hide meetings overview from sidebar navigation */
+.hidden-from-nav {
+  display: none !important;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #61dafb !important;

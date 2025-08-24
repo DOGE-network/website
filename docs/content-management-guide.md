@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Content Management Guide
@@ -10,7 +10,6 @@ This website uses Docusaurus, which has a specific architecture for content mana
 
 - **`docs/` directory**: Contains markdown files that automatically become documentation pages
 - **`src/pages/` directory**: Contains custom React functionality (redirects, special features)
-- **Admin interface**: At `/admin` allows non-technical users to edit markdown files
 
 ## How It Works
 
@@ -84,10 +83,10 @@ export default function Meetings() {
 ## File Structure
 
 ```
-docs/                           # Documentation content (editable via admin)
+docs/                           # Documentation content
 ├── meetings.md                 # Becomes /docs/meetings page
 ├── schedule.md                 # Becomes /docs/schedule page
-└── meeting-notes/             # Detailed meeting notes
+└── meetings/                   # Detailed meeting notes
 
 src/pages/                      # Custom React functionality only
 ├── meetings.tsx                # Redirects to /docs/meetings
@@ -104,7 +103,6 @@ static/admin/                    # Admin interface for content editing
 - **`/schedule`** → Redirects to `/docs/schedule` (actual content)
 - **`/docs/meetings`** → Shows content from `docs/meetings.md`
 - **`/docs/schedule`** → Shows content from `docs/schedule.md`
-- **`/admin`** → Admin interface for editing markdown files
 
 ## Troubleshooting
 
@@ -118,15 +116,9 @@ static/admin/                    # Admin interface for content editing
 2. Ensure all content is in markdown files in `docs/`
 3. Use the admin interface to edit content
 
-### Admin Interface Issues
-1. Verify the admin interface is accessible at `/admin`
-2. Check that GitHub links in admin point to correct files in `docs/`
-3. Ensure proper permissions for editing markdown files
-
 ## Need Help?
 
 If you encounter issues with content management:
 1. Check this guide first
-2. Review the admin interface at `/admin`
-3. Verify you're editing files in the `docs/` directory
-4. Contact your technical team for assistance
+2. Verify you're editing files in the `docs/` directory
+3. Use Contact information to ask for help
