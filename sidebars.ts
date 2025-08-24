@@ -13,16 +13,29 @@ function generateSortedMeetings() {
   try {
     const meetingsDir = path.join(__dirname, 'docs', 'meetings');
     const files = fs.readdirSync(meetingsDir)
-      .filter(file => file.endsWith('.md') && file.startsWith('meeting-'))
+      .filter(file => file.endsWith('.md'))
       .map(file => {
-        // Extract date from filename (meeting-YYYY-MM-DD.md)
-        const match = file.match(/meeting-(\d{4}-\d{2}-\d{2})/);
-        if (match) {
-          return {
-            file: file.replace('.md', ''),
-            date: new Date(match[1]),
-            sortKey: match[1] // YYYY-MM-DD for sorting
-          };
+        const filePath = path.join(meetingsDir, file);
+        const content = fs.readFileSync(filePath, 'utf8');
+        
+        // Extract date from front matter
+        const dateMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+        if (dateMatch) {
+          const frontMatter = dateMatch[1];
+          const dateMatch2 = frontMatter.match(/^date:\s*["']?([^"\n]+)["']?/m);
+          if (dateMatch2) {
+            const dateStr = dateMatch2[1];
+            // Parse DD-MM-YYYY format
+            const [day, month, year] = dateStr.split('-').map(Number);
+            if (day && month && year) {
+              const date = new Date(year, month - 1, day); // month is 0-indexed in Date constructor
+              return {
+                file: file.replace('.md', ''),
+                date: date,
+                sortKey: `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}` // Convert to YYYY-MM-DD for sorting
+              };
+            }
+          }
         }
         return null;
       })
@@ -34,6 +47,9 @@ function generateSortedMeetings() {
   } catch (error) {
     console.error('Error generating sorted meetings:', error);
     return [
+      'meetings/meeting-2025-08-30',
+      'meetings/meeting-2025-08-23',
+      'meetings/meeting-2025-08-18',
     ];
   }
 }

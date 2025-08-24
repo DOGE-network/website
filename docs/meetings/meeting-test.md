@@ -1,7 +1,9 @@
 ---
+date: "12-01-2025"
+sidebar_position: 2
 ---
 
-# 30 Aug 2025 Weekly Meeting
+# testy Weekly Meeting
 
 ## Meeting Information
 

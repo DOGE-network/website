@@ -1,4 +1,5 @@
 ---
+date: "30-08-2025"
 sidebar_position: 2
 ---
 
@@ -10,15 +11,15 @@ sidebar_position: 2
 **Date:**  
 **Time:**  
 **Location:** 
-**Video** posted after meeting here
+**Video** embed link posted after meeting here
 
 ## Agenda
 
-- 
+- blah blah
 
 ## Notes
 
-- 
+- blah blah
 
 
 ## Chat

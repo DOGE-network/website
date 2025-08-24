@@ -1,4 +1,6 @@
 ---
+date: "23-08-2025"
+sidebar_position: 2
 ---
 
 # 23 Aug 2025 Weekly Meeting
