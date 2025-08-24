@@ -37,7 +37,7 @@ const clients: Client[] = [
   {
     name: 'West Virginia Wire',
     logo: '/img/west-virginia-wire.jpg',
-    website: 'https://www.youtube.com/@westvirginiawire',
+    website: 'https://westvirginiawire.dogenetwork.org/',
     summary: 'Welcome to West Virginia Wire, where we explore a variety of topics designed to inform, inspire, and engage! Whether you\'re looking for insightful Bible studies, thought-provoking book readings, honest reaction videos, or the latest updates on local state news, you\'ll find it here. We also dive into current political events, offering perspectives and discussions that keep you informed on the issues that matter. Subscribe to stay-up-to-date with engaging content that encourages learning, reflection',
     fullDescription: '',
   },
