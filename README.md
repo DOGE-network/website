@@ -6,15 +6,11 @@ A Docusaurus-based website for the Conservative Technology Group, supporting var
 
 We individually are supporting various projects related to government transparency. While these are generally passion projects that we would do for free, it would be nice to get collaboration across many similar projects to help push forward. For that purpose, we have decided to start meeting in person.
 
-Possible outcome could be to form a nonprofit organization to help with organizing and supporting projects. It would be self organizing and classified as a 501(c) for federal tax purposes.
-
-## Website Features
-
-- **Homepage**: Mission statement and overview of the network
-- **Meetings**: YouTube video player for recorded meetings, meeting notes, and agendas
-- **Schedule**: Biannual AmericaFest and CPAC gatherings, plus regular virtual meetings
-- **About**: Detailed information about our mission and approach
-- **Documentation**: Meeting notes, agendas, and project resources
+- **plans** https://dogenetwork.org/about
+- **docs** https://dogenetwork.org
+- **calendar https://dogenetwork.org/calendar
+- **work** https://github.com/DOGE-network/website/issues
+- If you want to get involved, check out the outstanding work and join a meeting
 
 ## Technology Stack
 
@@ -23,7 +19,7 @@ Possible outcome could be to form a nonprofit organization to help with organizi
 - **TypeScript**: Type-safe development
 - **CSS Variables**: React Native-inspired design system
 
-## Getting Started
+## Getting Started, if you want to work on the website
 
 ### Prerequisites
 
