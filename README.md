@@ -8,7 +8,7 @@ We individually are supporting various projects related to government transparen
 
 - **plans** https://dogenetwork.org/about
 - **docs** https://dogenetwork.org
-- **calendar https://dogenetwork.org/calendar
+- **calendar** https://dogenetwork.org/calendar
 - **work** https://github.com/DOGE-network/website/issues
 - If you want to get involved, check out the outstanding work and join a meeting
 
