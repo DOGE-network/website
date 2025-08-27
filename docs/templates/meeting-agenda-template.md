@@ -5,6 +5,8 @@ sidebar_position: 2
 
 # Meeting Agenda
 
+- replace this header with the meeting title when you copy this template
+
 ## Meeting Information
 
 **Meeting Type:** 
