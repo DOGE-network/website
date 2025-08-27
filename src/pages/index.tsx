@@ -21,12 +21,16 @@ function HomepageHeader() {
           <Link className='button button--secondary button--lg' to='/meetings'>
             Join Our Meetings 📅
           </Link>
+          <Link className='button button--secondary button--lg' to='/about'>
+            Learn More 📚
+          </Link>
           <Link
             className='button button--secondary button--lg'
-            to='/about'
-            style={{ marginLeft: '16px' }}
+            to='https://forms.gle/5WD4CA6h3tmcgvTL7'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            Learn More 📚
+            Volunteer for CTG AmericaFest 🎉
           </Link>
         </div>
       </div>
@@ -103,10 +107,7 @@ function UpcomingEvents() {
                 Biannual face-to-face gathering to plan the next 6 months of
                 work.
               </p>
-              <Link 
-                className='button' 
-                to='/schedule'
-              >
+              <Link className='button' to='/schedule'>
                 View Schedule
               </Link>
             </div>
@@ -118,10 +119,7 @@ function UpcomingEvents() {
                 Biannual face-to-face gathering to plan the next 6 months of
                 work.
               </p>
-              <Link 
-                className='button' 
-                to='/schedule'
-              >
+              <Link className='button' to='/schedule'>
                 View Schedule
               </Link>
             </div>
@@ -197,10 +195,7 @@ function GetInvolved() {
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📅 View Schedule</h3>
               <p>See our detailed event schedule and information.</p>
-              <Link 
-                className='button' 
-                to='/schedule'
-              >
+              <Link className='button' to='/schedule'>
                 View Schedule
               </Link>
             </div>
