@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Event, fetchGoogleCalendarEvents, getGoogleEventsByMonth } from '../../data/events';
+import { Event, fetchGoogleCalendarEvents } from '../../data/events';
 import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
@@ -51,16 +51,19 @@ export default function EventsCalendar({
         // Get Google Calendar events if API credentials are available
         const apiKey = siteConfig.customFields?.googleCalendarApiKey as string;
         const calendarId = siteConfig.customFields?.googleCalendarId as string;
-        
+
         if (apiKey && calendarId) {
-          const googleEvents = await fetchGoogleCalendarEvents(apiKey, calendarId);
+          const googleEvents = await fetchGoogleCalendarEvents(
+            apiKey,
+            calendarId
+          );
           setAllEvents(googleEvents);
         } else {
           setAllEvents([]);
         }
-      } catch (err) {
+      } catch {
         setError('Failed to load calendar events');
-        console.error('Error loading events:', err);
+        // console.error('Error loading events');
       } finally {
         setLoading(false);
       }
@@ -73,18 +76,23 @@ export default function EventsCalendar({
   const monthEvents = allEvents.filter(event => {
     const eventDate = new Date(event.date);
     const eventEndDate = event.endDate ? new Date(event.endDate) : null;
-    
+
     // Check if event starts in this month
-    const startsInMonth = eventDate.getFullYear() === year && eventDate.getMonth() === month;
-    
+    const startsInMonth =
+      eventDate.getFullYear() === year && eventDate.getMonth() === month;
+
     // Check if event ends in this month
-    const endsInMonth = eventEndDate && eventEndDate.getFullYear() === year && eventEndDate.getMonth() === month;
-    
+    const endsInMonth =
+      eventEndDate &&
+      eventEndDate.getFullYear() === year &&
+      eventEndDate.getMonth() === month;
+
     // Check if event spans across this month
-    const spansMonth = eventEndDate && 
-      eventDate.getTime() <= new Date(year, month + 1, 0).getTime() && 
+    const spansMonth =
+      eventEndDate &&
+      eventDate.getTime() <= new Date(year, month + 1, 0).getTime() &&
       eventEndDate.getTime() >= new Date(year, month, 1).getTime();
-    
+
     return startsInMonth || endsInMonth || spansMonth;
   });
 
@@ -205,15 +213,17 @@ export default function EventsCalendar({
 
   const renderListView = () => {
     // Show all events for the current month in list view
-    const monthEventsSorted = monthEvents.sort((a, b) => 
-      new Date(a.date).getTime() - new Date(b.date).getTime()
+    const monthEventsSorted = monthEvents.sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
     );
 
     return (
       <div className={styles.listView}>
         {monthEventsSorted.length === 0 ? (
           <div className={styles.noEvents}>
-            <p>No events scheduled for {MONTHS[month]} {year}</p>
+            <p>
+              No events scheduled for {MONTHS[month]} {year}
+            </p>
           </div>
         ) : (
           monthEventsSorted.map(event => (
@@ -227,9 +237,13 @@ export default function EventsCalendar({
                   {event.title}
                   {event.url && (
                     <span className={styles.meetingUrl}>
-                      {' '} -- <a
+                      {' '}
+                      --{' '}
+                      <a
                         href={event.url}
-                        target={event.url.startsWith('http') ? '_blank' : '_self'}
+                        target={
+                          event.url.startsWith('http') ? '_blank' : '_self'
+                        }
                       >
                         {event.url}
                       </a>
@@ -242,7 +256,9 @@ export default function EventsCalendar({
                     {event.endDate && ` - ${formatDate(event.endDate)}`}
                   </span>
                   {event.location && (
-                    <span className={styles.eventLocation}>{event.location}</span>
+                    <span className={styles.eventLocation}>
+                      {event.location}
+                    </span>
                   )}
                 </div>
                 {event.description && (
@@ -271,7 +287,10 @@ export default function EventsCalendar({
       <div className={styles.eventsCalendar}>
         <div className={styles.errorState}>
           <p>Error: {error}</p>
-          <button onClick={() => window.location.reload()} className={styles.retryButton}>
+          <button
+            onClick={() => window.location.reload()}
+            className={styles.retryButton}
+          >
             Retry
           </button>
         </div>
@@ -334,7 +353,9 @@ export default function EventsCalendar({
             <span>Google Calendar Events</span>
           </div>
           <div className={styles.legendItem}>
-            <span>Events in {MONTHS[month]}: {monthEvents.length}</span>
+            <span>
+              Events in {MONTHS[month]}: {monthEvents.length}
+            </span>
           </div>
           <div className={styles.legendItem}>
             <span>Total Events: {allEvents.length}</span>

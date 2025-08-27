@@ -54,7 +54,8 @@ export const events: Event[] = [
     endDate: '2024-02-24',
     location: 'National Harbor, MD',
     type: 'biannual',
-    description: 'Conservative Political Action Conference - Strategic planning and networking',
+    description:
+      'Conservative Political Action Conference - Strategic planning and networking',
     url: 'https://cpac2024.conservative.org/',
     duration: '4 days',
   },
@@ -128,7 +129,8 @@ export const events: Event[] = [
     title: 'Weekly Check-in',
     date: '2025-08-07',
     type: 'weekly',
-    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    description:
+      'Regular virtual meeting to discuss progress and coordinate projects',
     url: '/docs/meetings',
   },
   {
@@ -136,7 +138,8 @@ export const events: Event[] = [
     title: 'Weekly Check-in',
     date: '2025-08-14',
     type: 'weekly',
-    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    description:
+      'Regular virtual meeting to discuss progress and coordinate projects',
     url: '/docs/meetings',
   },
   {
@@ -144,7 +147,8 @@ export const events: Event[] = [
     title: 'Weekly Check-in',
     date: '2025-08-21',
     type: 'weekly',
-    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    description:
+      'Regular virtual meeting to discuss progress and coordinate projects',
     url: '/docs/meetings',
   },
   {
@@ -152,7 +156,8 @@ export const events: Event[] = [
     title: 'Weekly Check-in',
     date: '2025-08-28',
     type: 'weekly',
-    description: 'Regular virtual meeting to discuss progress and coordinate projects',
+    description:
+      'Regular virtual meeting to discuss progress and coordinate projects',
     url: '/docs/meetings',
   },
   // August 2025 specific events
@@ -161,7 +166,8 @@ export const events: Event[] = [
     title: 'AmericaFest 2025 Planning Meeting',
     date: '2025-08-22',
     type: 'biannual',
-    description: 'Follow up meeting. TBD holding these as a X space. Aladdin, twinforces and I are going to meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec. This meeting will be transcribed and recorded.',
+    description:
+      'Follow up meeting. TBD holding these as a X space. Aladdin, twinforces and I are going to meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec. This meeting will be transcribed and recorded.',
     url: '/docs/americafest-2025',
   },
   // Optional events from 2025
@@ -357,14 +363,21 @@ export function getUpcomingEvents(limit: number = 5): Event[] {
 // Google Calendar API functions
 const GOOGLE_CALENDAR_API_BASE = 'https://www.googleapis.com/calendar/v3';
 
-export async function fetchGoogleCalendarEvents(apiKey?: string, calendarId?: string): Promise<Event[]> {
+export async function fetchGoogleCalendarEvents(
+  apiKey?: string,
+  calendarId?: string
+): Promise<Event[]> {
   if (!apiKey) {
-    console.warn('Google Calendar API key not found. Please set REACT_APP_GOOGLE_CALENDAR_API_KEY environment variable.');
+    // console.warn(
+    //   'Google Calendar API key not found. Please set REACT_APP_GOOGLE_CALENDAR_API_KEY environment variable.'
+    // );
     return [];
   }
 
   if (!calendarId) {
-    console.warn('Google Calendar ID not found. Please set REACT_APP_GOOGLE_CALENDAR_ID environment variable.');
+    // console.warn(
+    //   'Google Calendar ID not found. Please set REACT_APP_GOOGLE_CALENDAR_ID environment variable.'
+    // );
     return [];
   }
 
@@ -372,9 +385,14 @@ export async function fetchGoogleCalendarEvents(apiKey?: string, calendarId?: st
     const now = new Date();
     const timeMin = now.toISOString();
     // Get events for the next year
-    const timeMax = new Date(now.getFullYear() + 1, now.getMonth(), now.getDate()).toISOString();
+    const timeMax = new Date(
+      now.getFullYear() + 1,
+      now.getMonth(),
+      now.getDate()
+    ).toISOString();
 
-    const url = `${GOOGLE_CALENDAR_API_BASE}/calendars/${encodeURIComponent(calendarId)}/events?` +
+    const url =
+      `${GOOGLE_CALENDAR_API_BASE}/calendars/${encodeURIComponent(calendarId)}/events?` +
       `key=${apiKey}&` +
       `timeMin=${timeMin}&` +
       `timeMax=${timeMax}&` +
@@ -386,15 +404,15 @@ export async function fetchGoogleCalendarEvents(apiKey?: string, calendarId?: st
     const data: GoogleCalendarResponse = await response.json();
 
     if (data.error) {
-      console.error('Google Calendar API error:', data.error);
+      // console.error('Google Calendar API error:', data.error);
       return [];
     }
 
     return data.items
       .filter(item => item.status === 'confirmed')
       .map(transformGoogleEventToEvent);
-  } catch (error) {
-    console.error('Error fetching Google Calendar events:', error);
+  } catch {
+    // console.error('Error fetching Google Calendar events');
     return [];
   }
 }
@@ -402,7 +420,7 @@ export async function fetchGoogleCalendarEvents(apiKey?: string, calendarId?: st
 function transformGoogleEventToEvent(googleEvent: GoogleCalendarEvent): Event {
   const startDate = googleEvent.start.dateTime || googleEvent.start.date;
   const endDate = googleEvent.end.dateTime || googleEvent.end.date;
-  
+
   // Convert datetime to date string
   const formatDate = (dateStr: string): string => {
     const date = new Date(dateStr);
@@ -440,7 +458,10 @@ function transformGoogleEventToEvent(googleEvent: GoogleCalendarEvent): Event {
   return event;
 }
 
-export async function getGoogleEventsByMonth(year: number, month: number): Promise<Event[]> {
+export async function getGoogleEventsByMonth(
+  year: number,
+  month: number
+): Promise<Event[]> {
   const allEvents = await fetchGoogleCalendarEvents();
   return allEvents.filter(event => {
     const eventDate = new Date(event.date);

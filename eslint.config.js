@@ -39,6 +39,10 @@ module.exports = [
         URLSearchParams: 'readonly',
         btoa: 'readonly',
         atob: 'readonly',
+        // HTML Element types
+        HTMLButtonElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLElement: 'readonly',
       },
     },
     plugins: {
@@ -71,6 +75,7 @@ module.exports = [
       'no-debugger': 'error',
       'prefer-const': 'error',
       'no-var': 'error',
+      'no-unused-vars': 'off', // Disabled in favor of @typescript-eslint/no-unused-vars
       
       // Accessibility rules
       'jsx-a11y/anchor-is-valid': 'warn',
