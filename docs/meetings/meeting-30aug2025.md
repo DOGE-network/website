@@ -5,6 +5,28 @@ sidebar_position: 2
 
 # 30 Aug 2025 Weekly Meeting
 
+## Action Items
+
+1. Start publishing polls and clips on team doge
+1. Add otter or similar for auto summary and action items
+1. regina wants to form a marketing team with shell
+1. regina needs me to share the in person video a different way
+1. shell wants to help with start Michigan DOGE
+1. sean will dig into airb&b for core team and hotel room block and conference room for event
+1. X space event planning
+	1. we decided that 20 Sep 2025 17:00 - 18:30 PT is ideal
+	1. plan next esp right after first x space. maybe more often than once a month
+	1. refina wants to also do pre recorded broadcast on x spaces
+	1. regina will manage sorting volunteers into various teams
+1. X space 20 Sep 2025 agenda
+	1. sean share amerifest: what, when, where, how
+	1. americafest fundraising
+	1. 15m vibe doge(ing), deep diving on data. community voting on what to develop next. 
+	1. 15m building the DOGE local, state, national data sources
+	1. 15m social media aspect, community building, finding the website
+	1. americafest fundraising
+
+
 ## Meeting Information
 
 - **Meeting Type:** Weekly  

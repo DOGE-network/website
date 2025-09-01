@@ -7,13 +7,17 @@ sidebar_position: 2
 
 - replace this header with the meeting title when you copy this template
 
+## Action Items
+
+- replace this with meeting action items after the meeting is completed
+
 ## Meeting Information
 
-**Meeting Type:** 
-**Date:**  
-**Time:**  
-**Location:** 
-**Video** embed link posted after meeting here
+- **Meeting Type:** 
+- **Date:**  
+- **Time:**  
+- **Location:** 
+- **Video** embed link posted after meeting here
 
 ## Agenda
 
@@ -23,7 +27,10 @@ sidebar_position: 2
 
 - blah blah
 
-
 ## Chat
 
-posted after meeting here
+replace this with meeting chat after the meeting is completed
+
+## Transcript
+
+replace this with meeting transcript after the meeting is completed
