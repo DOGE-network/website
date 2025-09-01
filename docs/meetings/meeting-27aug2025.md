@@ -7,11 +7,11 @@ sidebar_position: 2
 
 ## Meeting Information
 
-**Meeting Type:** Adhoc
-**Date:**  27 Aug 2025
-**Time:** 08:00 PT
-**Location:** Streamyard https://streamyard.com/gdfy3qdhbc, Google Meet https://meet.google.com/dxi-qjvf-khp
-**Video** N/A
+- **Meeting Type:** Adhoc
+- **Date:**  27 Aug 2025
+- **Time:** 08:00 PT
+- **Location:** Streamyard https://streamyard.com/gdfy3qdhbc, Google Meet https://meet.google.com/dxi-qjvf-khp
+- **Video** N/A
 
 # Agenda
 
