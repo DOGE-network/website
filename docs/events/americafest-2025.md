@@ -24,6 +24,8 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 
 ## travel, lodging
 
+- map of hotel options https://maps.app.goo.gl/x97vuSJG2hCNBedy6?g_st=i
+- map of airb&b options https://www.airbnb.com/l/DpyFHc59
 - hotel room block
 - hotel conference room(s)
 
