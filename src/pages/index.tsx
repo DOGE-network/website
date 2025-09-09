@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ClientCarousel from '@site/src/components/ClientCarousel';
+import Head from '@docusaurus/Head';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -177,7 +178,12 @@ function GetInvolved() {
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📹 Watch Meetings</h3>
               <p>View our recorded meetings and discussions on YouTube.</p>
-              <Link className='button' to='/meetings'>
+              <Link 
+                className='button' 
+                to='https://www.youtube.com/@doge_network'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 Meeting Videos
               </Link>
             </div>
@@ -218,10 +224,11 @@ function GetInvolved() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title} - Supporting Government Transparency`}
-      description='Conservative Technology Group supports various projects related to government transparency through collaboration and in-person meetings.'
-    >
+    <Layout>
+      <Head>
+        <title>{`${siteConfig.title} - Supporting Government Transparency`}</title>
+        <meta name="description" content="Conservative Technology Group supports various projects related to government transparency through collaboration and in-person meetings." />
+      </Head>
       <HomepageHeader />
       <main>
         <MissionSection />
