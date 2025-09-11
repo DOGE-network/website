@@ -15,6 +15,52 @@ sidebar_position: 4
 
 AmericaFest 2025 will be our spring biannual gathering for the Conservative Technology Group. This face-to-face event will focus on strategic planning for government transparency projects and setting priorities for the next 6 months.
 
+### Tentative Schedule Day 1, 17 Dec 2025
+
+#### Overview
+- breakfast
+- welcome talk
+- talk blocks
+- breakout talks
+
+#### Welcome: 20m Sean and Team will introduce the event
+
+#### talk block one
+  - 15m Sean: Discuss, plan next 6m of projects
+    - California DOGE https://cali-doge.org plus others
+
+#### 20m break
+
+#### talk block two/ fireside chats
+  - 40m Steven, others: **Open Government Data List**, gathering all the unstructured data sources FOIAable government data, local, regional, state, and federal and making the list available raw for the public, researchers and reporters. data.gov foia.gov, directory.civictech.guide, and others provide some lists, but not complete. This list will be comprehensive. 
+  - 40m Sean, Prescott: **Government Data (K)aggle**
+    - the data pipeline for the Open Government Data List. Use the data list as the unstructured data source for many data pipelines to Extract Transform and Load (ETL) on a regular schedule. The ETL processes will make the data available for any open data, research or investigative projects to process. It will also follow a common standard like CKAN, so that all the data sets are easily processed. 
+    - this is an objective that nontech people can get behind and fund
+  - 40m open
+
+#### 20m break
+
+#### talk block three
+
+  - 40m open
+
+#### 90m lunch
+
+#### 3hr breakout topic ideas so far
+  - Gathering all the unstructured data sources FOIAable government data, local, regional, state, and federal and making the list available raw for the public, researchers and reporters
+  - Government Data Kaggle
+  - AI regulation and federal AI EO  
+  - State of open data in US  
+  - Get financial help for people to attend that need it  
+  - Build, train  teams in every state using our model like DOGE network. Labor intensive work.   
+  - CKAN standard and how we can make city, county, state financial data available  
+  - Vibe coding session  
+  - Recruit under, post grad students for OSS work  
+  - Open the books has alot of checkbook related data. How do we compliment them?
+  - Data pipeline and ETL overview for data intensive projects 
+
+#### closing msg
+
 ## Organizers so far
 
 - Sean Roberts  
@@ -39,32 +85,6 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 - Legal:
 - Finance:
 - BizDev, Group Outreach:
-
-### Tentative Schedule Day 1, 17 Dec 2025
-
-- breakfast
-- welcome talk
-- talk blocks
-- breakout talks?
-
-- objectives
-  - primary purpose of phoenix meeting will be to discuss, plan next 6m of projects 
-  - secondary purpose will be to discuss forming a nonprofit to manage shared tech infrastructure, volunteer credit, and project expenses
-
-- List of projects committed
-    - California DOGE https://cali-doge.org
-
-- breakout topic ideas so far  
-  - AI regulation and federal AI EO  
-  - State of open data in US  
-  - Get financial help for people to attend that need it  
-  - Build, train  teams in every state using our model like DOGE network. Labor intensive work.   
-  - CKAN standard and how we can make city, county, state financial data available  
-  - Vibe coding session  
-  - Recruit under, post grad students for OSS work  
-  - Open the books has alot of checkbook related data. How do we compliment them?  
-  - Gathering all the unstructured data FOIAable government data and making it available raw for the public, researchers and reporters  
-  - Data pipeline and ETL overview for data intensive projects 
 
  ## AmericaFest Details
 
