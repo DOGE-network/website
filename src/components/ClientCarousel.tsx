@@ -45,6 +45,27 @@ const clients: Client[] = [
       "Welcome to West Virginia Wire, where we explore a variety of topics designed to inform, inspire, and engage! Whether you're looking for insightful Bible studies, thought-provoking book readings, honest reaction videos, or the latest updates on local state news, you'll find it here. We also dive into current political events, offering perspectives and discussions that keep you informed on the issues that matter. Subscribe to stay-up-to-date with engaging content that encourages learning, reflection",
     fullDescription: '',
   },
+  {
+    name: 'Kansas DOGE',
+    logo: '/img/Flag_of_Kansas.svg',
+    website: 'https://github.com/DOGE-network',
+    summary: 'Under development',
+    fullDescription: 'Kansas DOGE is currently under development as part of the DOGE Network initiative.',
+  },
+  {
+    name: 'West Virginia DOGE',
+    logo: '/img/Flag_of_West_Virginia.svg',
+    website: 'https://github.com/DOGE-network',
+    summary: 'Under development',
+    fullDescription: 'West Virginia DOGE is currently under development as part of the DOGE Network initiative.',
+  },
+  {
+    name: 'Michigan DOGE',
+    logo: '/img/Flag_of_Michigan.svg',
+    website: 'https://github.com/DOGE-network',
+    summary: 'Under development',
+    fullDescription: 'Michigan DOGE is currently under development as part of the DOGE Network initiative.',
+  },
 ];
 
 export default function ClientCarousel() {

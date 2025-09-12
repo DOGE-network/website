@@ -1,11 +1,11 @@
 ---
-date: "06-16-2025"
+date: "06-23-2025"
 sidebar_position: 2
 ---
 
 # Team DOGE X Space
 
-1. 16 Sep 2025 17:00 - 18:30 agenda
+1. 23 Sep 2025 17:00 - 18:30 agenda
 	1. sean share amerifest: what, when, where, how
 	1. americafest fundraising
 	1. 15m vibe doge(ing), deep diving on data. community voting on what to develop next. 
