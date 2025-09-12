@@ -27,13 +27,13 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 
 #### talk block one
   - 15m Sean: Discuss, plan next 6m of projects
-    - California DOGE https://cali-doge.org plus others
+    - California DOGE https://cali-doge.org plus Kansas, West Virginia, Michigan, and others. 
 
 #### 20m break
 
 #### talk block two/ fireside chats
   - 40m Steven, others: **Open Government Data List**, gathering all the unstructured data sources FOIAable government data, local, regional, state, and federal and making the list available raw for the public, researchers and reporters. data.gov foia.gov, directory.civictech.guide, and others provide some lists, but not complete. This list will be comprehensive. 
-  - 40m Sean, Prescott: **Government Data (K)aggle**
+  - 40m Sean, (guest TBD): **Government Data (K)aggle**
     - the data pipeline for the Open Government Data List. Use the data list as the unstructured data source for many data pipelines to Extract Transform and Load (ETL) on a regular schedule. The ETL processes will make the data available for any open data, research or investigative projects to process. It will also follow a common standard like CKAN, so that all the data sets are easily processed. 
     - this is an objective that nontech people can get behind and fund
   - 40m open
@@ -48,7 +48,7 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 
 #### 3hr breakout topic ideas so far
   - Gathering all the unstructured data sources FOIAable government data, local, regional, state, and federal and making the list available raw for the public, researchers and reporters
-  - Government Data Kaggle
+  - Government Data (K)aggle
   - AI regulation and federal AI EO  
   - State of open data in US  
   - Get financial help for people to attend that need it  
@@ -66,7 +66,7 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 - Sean Roberts  
 - Pierce Wetter
 - Steven Alebadi   
-- Regina Connell 
+- Regina Connell
 
 ## travel, lodging
 
@@ -79,17 +79,17 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 
 - Engineering AV: Regina
 - Engineering Else:
-- Security:
+- Security: Shawn, John
 - Lead Operations:
 - Speakers, Schedule:
 - Legal:
-- Finance:
+- Finance: 
 - BizDev, Group Outreach:
 
  ## AmericaFest Details
 
 - Registration https://www.amfest.com/home#register
-  - Adult, general $50
+  - Adult, general $100
   - Adult, VIP $600
 - Hotels, official https://www.amfest.com/lodging
 - Sponsorship questions sponsor@tpusa.com 
