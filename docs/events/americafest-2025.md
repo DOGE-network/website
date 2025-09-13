@@ -42,7 +42,7 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 #### talk block three
 
   - 40m Sean, (guest TBD): **Government Data (K)aggle**, the data pipeline for the Open Government Data List. Use the data list as the unstructured data source for many data pipelines to Extract Transform and Load (ETL) on a regular schedule. The ETL processes will make the data available for any open data, research or investigative projects to process. It will also follow a common standard like CKAN, so that all the data sets are easily processed. this is an objective that nontech people can get behind and fund
-  - 40m (guest TBD) **Climate Change, Electricity and Data Centers: How Data Science has been manipulated to serve the latest popular fad**, this has not been fully fleshed out yet. If we can get a meteorologist with data science background to speak on the complexities of massive data sets and misuse can lead to outcomes like in California.
+  - 40m (guest TBD) **Climate Science, Data Centers, and the Electrical Grid: Data Science manipulation leads to Government Making Bad Investments**, many billions of tax dollars have been spent on Climate science resulting in corruption and a fragile electrical grid. Now the AI Data Center demand threatens to repeat the process again.  
 
 #### 90m lunch
 
