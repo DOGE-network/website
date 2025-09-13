@@ -3,7 +3,7 @@ date: "06-12-2025"
 sidebar_position: 2
 ---
 
-# Expenses
+# CTG AmericaFest 2025 Expenses
 
 ## Summary for 10 People
 
