@@ -68,6 +68,8 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 - Steven Alebadi   
 - Regina Connell
 
+# [Expenses](docs/events/americafest-2025-expenses.md)
+
 ## travel, lodging
 
 - map of hotel options https://maps.app.goo.gl/x97vuSJG2hCNBedy6?g_st=i
