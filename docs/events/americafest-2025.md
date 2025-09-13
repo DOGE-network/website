@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# AmericaFest 2025, Public Private Parntership
+# CTG AmericaFest 2025
 
 ## Event Overview
 
