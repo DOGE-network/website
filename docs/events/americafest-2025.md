@@ -32,16 +32,16 @@ AmericaFest 2025 will be our spring biannual gathering for the Conservative Tech
 #### 20m break
 
 #### talk block two/ fireside chats
+  - 40m Pierce, (guest TBD): **Fighting Government Censorship**, We came dangerously close to losing the ability to speak over the past 5+ years. Governments, NGOs, and companies conspired to put limits on speech and thought. Lucky for the US, we can still organize to fight and argue. I see our technology focus as a way to enshrine those principles. Our rights come from the creator, not government. It is our duty to be vigilant and defend those rights.
+  - 40m (guest TBD) **How a Cartoon Mobilized a Generation**, the story behind Dilbert and how it showed conservative tech bros that they were not alone. 
   - 40m Steven, others: **Open Government Data List**, gathering all the unstructured data sources FOIAable government data, local, regional, state, and federal and making the list available raw for the public, researchers and reporters. data.gov foia.gov, directory.civictech.guide, and others provide some lists, but not complete. This list will be comprehensive. 
-  - 40m Sean, (guest TBD): **Government Data (K)aggle**
-    - the data pipeline for the Open Government Data List. Use the data list as the unstructured data source for many data pipelines to Extract Transform and Load (ETL) on a regular schedule. The ETL processes will make the data available for any open data, research or investigative projects to process. It will also follow a common standard like CKAN, so that all the data sets are easily processed. 
-    - this is an objective that nontech people can get behind and fund
-  - 40m open
+  - 40m (guest TBD) **Grassroots Organizing**, how to mobilize your friends and neighbors to work towards a common goal. Defending free speech and organizing to expose corruption requires a lot of work. Lets break down how anyone can do this. 
 
 #### 20m break
 
 #### talk block three
 
+  - 40m Sean, (guest TBD): **Government Data (K)aggle**, the data pipeline for the Open Government Data List. Use the data list as the unstructured data source for many data pipelines to Extract Transform and Load (ETL) on a regular schedule. The ETL processes will make the data available for any open data, research or investigative projects to process. It will also follow a common standard like CKAN, so that all the data sets are easily processed. this is an objective that nontech people can get behind and fund
   - 40m open
 
 #### 90m lunch
