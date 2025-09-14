@@ -71,7 +71,10 @@ function MissionSection() {
             </h2>
             <div className='card'>
               <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>We develop tools related to government transparency and for the public good. We implement ETL and data standards to facilitate many data sources correlation so that timely research can be turned into action. Our goal is to apply the tools and implementation to make data accessible from local, regional, and national sources.</p>
-              <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>For example, the California DOGE codebase is both for California State government data research and as a template for other states to follow. Code is publicly licensed as Apache 2.0 and CC-BY. We can help you organize your team and start your own DOGE related site. We aspire to compliment [Data Republican](https://datarepublican.com) and [Federal DOGE](https://doge.gov).</p>
+              <br />
+              <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>
+                For example, the California DOGE codebase is both for California State government data research and as a template for other states to follow. Code is publicly licensed as Apache 2.0 and CC-BY. We can help you organize your team and start your own DOGE related site. We aspire to complement <a href="https://datarepublican.com" target="_blank" rel="noopener noreferrer">Data Republican</a> and <a href="https://doge.gov" target="_blank" rel="noopener noreferrer">Federal DOGE</a>.
+              </p>
             </div>
           </div>
         </div>
