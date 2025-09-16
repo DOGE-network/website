@@ -81,6 +81,7 @@ const config: Config = {
         },
         items: [
           {to: '/docs/', label: 'Documentation', position: 'left'},
+          {to: '/howto', label: 'How To', position: 'left'},
           {to: '/meetings', label: 'Meetings', position: 'left'},
           {to: '/schedule', label: 'Schedule', position: 'left'},
           {to: '/calendar', label: 'Calendar', position: 'left'},
