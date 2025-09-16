@@ -1,8 +1,10 @@
+---
+sidebar_position: 2
+---
 
+# How to DOGE Your State: Guide for Open Source Beginners
 
-# How to DOGE Your State: Expanded Guide for Open Source Beginners
-
-This comprehensive tutorial explains both the technical and community sides of launching a state-level transparent government data initiative, using real open source workflows and licenses. This document expects that the reader is an experienced software engineer. Use [Vibe Coding for Beginners](/docs/vibe-coding-for-beginners.md) if you need to catch up fast. If this is too much and you want to build a team of engineers instead, refer to [Building Your Team](#building-your-team).
+This comprehensive tutorial explains both the technical and community sides of launching a state-level transparent government data initiative, using real open source workflows and licenses. This document expects that the reader is an experienced software engineer. Use [Vibe Coding for Beginners](/docs/howto/vibe-coding-for-beginners) if you need to catch up fast. If this is too much and you want to build a team of engineers instead, refer to [Building Your Team](#building-your-team).
 
 ***
 

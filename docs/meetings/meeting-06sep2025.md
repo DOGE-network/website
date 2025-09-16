@@ -25,7 +25,7 @@ sidebar_position: 2
 ## Agenda
 
 - meet and discuss meeting f2f on conservative tech projects @ AmericaFest 2025 in Phoenix 18-21 Dec 2025
-- discuss [16 september 17:00 - 18:30PT Team DOGE X space](/docs/events/team-doge-16sep2025.md)
+- discuss [16 september 17:00 - 18:30PT Team DOGE X space](/docs/events/team-doge-23sep2025)
 
 - Review action items from previous meeting 
 1. Start publishing polls and clips on team doge

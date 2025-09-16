@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # How to Be a Software Engineer with Cursor: The Complete Vibe Coding Guide for Beginners
 
 ***
@@ -393,7 +397,7 @@ These projects are designed to progressively build your skills while contributin
 Your first project involves creating a new DOGE-Network repository for your state using the California DOGE project as a template.
 
 #### Getting Started with the Template
-1. **Join the DOGE-Network organization** following the steps in [How to DOGE Your State](/docs/how-to-doge-your-state.md)
+1. **Join the DOGE-Network organization** following the steps in [How to DOGE Your State](/docs/howto/how-to-doge-your-state)
 2. **Use the cali_doge template**: Visit [https://github.com/DOGE-network/cali_doge](https://github.com/DOGE-network/cali_doge) and click "Use this template"
 3. **Name your repository**: Follow the pattern `[state_abbreviation]_doge` (e.g., `texas_doge`, `florida_doge`)
 4. **Clone your new repository**: `git clone https://github.com/DOGE-network/your_state_doge.git`
