@@ -16,12 +16,12 @@ sidebar_position: 2
 - **Meeting Type:** 
 - **Date:**  
 - **Time:**  
-- **Location:** 
+- **Location:** scheduled X space URL, schedule a month at a time
 - **Video** embed link posted after meeting here
 
 ## Agenda
 
-- blah blah
+- Action items from last meetiing
 
 ## Notes
 
