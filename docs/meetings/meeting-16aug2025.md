@@ -1,5 +1,5 @@
 ---
-date: "18-08-2025"
+date: "16-08-2025"
 sidebar_position: 2
 ---
 # 16 Aug 2025 First Meeting
