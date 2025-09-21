@@ -19,11 +19,14 @@ function HomepageHeader() {
         </Heading>
         <p className='hero__subtitle'>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
+          <Link
+            className='button button--secondary button--lg'
+            to='/join-doge-network'
+          >
+            Join DOGE Network 🚀
+          </Link>
           <Link className='button button--secondary button--lg' to='/meetings'>
             Join Our Meetings 📅
-          </Link>
-          <Link className='button button--secondary button--lg' to='/about'>
-            Learn More 📚
           </Link>
           <Link
             className='button button--secondary button--lg'
@@ -70,10 +73,37 @@ function MissionSection() {
               Our Purpose
             </h2>
             <div className='card'>
-              <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>We develop tools related to government transparency and for the public good. We implement ETL and data standards to facilitate many data sources correlation so that timely research can be turned into action. Our goal is to apply the tools and implementation to make data accessible from local, regional, and national sources.</p>
+              <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>
+                We develop tools related to government transparency and for the
+                public good. We implement ETL and data standards to facilitate
+                many data sources correlation so that timely research can be
+                turned into action. Our goal is to apply the tools and
+                implementation to make data accessible from local, regional, and
+                national sources.
+              </p>
               <br />
               <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>
-                For example, the California DOGE codebase is both for California State government data research and as a template for other states to follow. Code is publicly licensed as Apache 2.0 and CC-BY. We can help you organize your team and start your own DOGE related site. We aspire to complement <a href="https://datarepublican.com" target="_blank" rel="noopener noreferrer">Data Republican</a> and <a href="https://doge.gov" target="_blank" rel="noopener noreferrer">Federal DOGE</a>.
+                For example, the California DOGE codebase is both for California
+                State government data research and as a template for other
+                states to follow. Code is publicly licensed as Apache 2.0 and
+                CC-BY. We can help you organize your team and start your own
+                DOGE related site. We aspire to complement{' '}
+                <a
+                  href='https://datarepublican.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Data Republican
+                </a>{' '}
+                and{' '}
+                <a
+                  href='https://doge.gov'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Federal DOGE
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -176,8 +206,8 @@ function GetInvolved() {
             <div className='card' style={{ textAlign: 'center' }}>
               <h3>📹 Watch Meetings</h3>
               <p>View our recorded meetings and discussions on YouTube.</p>
-              <Link 
-                className='button' 
+              <Link
+                className='button'
                 to='https://www.youtube.com/@doge_network'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -225,7 +255,10 @@ export default function Home() {
     <Layout>
       <Head>
         <title>{`${siteConfig.title} - Supporting Government Transparency`}</title>
-        <meta name="description" content="Conservative Technology Group supports various projects related to government transparency through collaboration and in-person meetings." />
+        <meta
+          name='description'
+          content='Conservative Technology Group supports various projects related to government transparency through collaboration and in-person meetings.'
+        />
       </Head>
       <HomepageHeader />
       <main>

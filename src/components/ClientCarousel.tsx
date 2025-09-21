@@ -50,21 +50,24 @@ const clients: Client[] = [
     logo: '/img/Flag_of_Kansas.svg',
     website: 'https://github.com/DOGE-network',
     summary: 'Under development',
-    fullDescription: 'Kansas DOGE is currently under development as part of the DOGE Network initiative.',
+    fullDescription:
+      'Kansas DOGE is currently under development as part of the DOGE Network initiative.',
   },
   {
     name: 'West Virginia DOGE',
     logo: '/img/Flag_of_West_Virginia.svg',
     website: 'https://github.com/DOGE-network',
     summary: 'Under development',
-    fullDescription: 'West Virginia DOGE is currently under development as part of the DOGE Network initiative.',
+    fullDescription:
+      'West Virginia DOGE is currently under development as part of the DOGE Network initiative.',
   },
   {
     name: 'Michigan DOGE',
     logo: '/img/Flag_of_Michigan.svg',
     website: 'https://github.com/DOGE-network',
     summary: 'Under development',
-    fullDescription: 'Michigan DOGE is currently under development as part of the DOGE Network initiative.',
+    fullDescription:
+      'Michigan DOGE is currently under development as part of the DOGE Network initiative.',
   },
 ];
 
