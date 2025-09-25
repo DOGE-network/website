@@ -49,12 +49,12 @@ sidebar_position: 2
 
 1. 1m kick off stream with welcome, brief on DOGE Network and Public Data. 
 1. 10s show doge network URL and screenshot
-1. 10s show CTG AmericaFest agenda URL and screenshot
 1. 30m pierce vibe doge(ing), deep diving on data republican data. community voting on what to develop next. 
 1. 10s show doge network URL and screenshot
 1. 30m steven building the DOGE local, state, national data sources
 1. 10s show doge network URL and screenshot
 1. 5m sean share amerifest: what, when, where, how
+1. 10s show CTG AmericaFest agenda URL and screenshot
 1. 15m doge network easy join, how to doge your state
 1. 10s show doge network URL and screenshot
 1. 15m+ buffer
