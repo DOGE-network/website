@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Team DOGE X Space
 
-## prep for broadcast or soace
+## prep for broadcast or space
 1. 14 days before stream, 
     1. if live broadcast: create RTMP URL in X media studio. share URL with community admin and shared into community. 
     1. if space, schedule in space panel. share URL with community admin and shared into community.
@@ -17,7 +17,7 @@ sidebar_position: 2
 
 ### option 1
 
-1. Pierce and maybe Jennica diacuaa Data Republican
+1. Pierce and maybe Jennica discuss Data Republican research
 
     1. history
     1. tools
@@ -27,7 +27,7 @@ sidebar_position: 2
 
 ### option 2 
 
-1. Steven diacuss Aladdin research
+1. Steven discuss Aladdin research
 
     1. history
     1. tools
@@ -37,7 +37,7 @@ sidebar_position: 2
 
 ### option 3
 
-1. Sean diacuss Aladdin Cali DOGE research
+1. Sean discuss Cali DOGE research
 
     1. history
     1. tools
