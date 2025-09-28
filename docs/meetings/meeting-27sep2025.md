@@ -45,43 +45,43 @@ sidebar_position: 2
 
 ## Notes
 
-doge network , public data corp
-	data transparency verses data science
-	propublica good example
-	allows 501c3 orgs to join PDC
+- doge network , public data corp
+	- data transparency verses data science
+	- propublica good example
+	- allows 501c3 orgs to join PDC
 naming
-	**find someone to help with naming**
-	DOGE has branding and partisan
-	Public Data Corp is not sexy
-	"We the Data" is pierce's idea
+- **find someone to help with naming**
+	- DOGE has branding and partisan
+	- Public Data Corp is not sexy
+	- "We the Data" is pierce's idea
 invited
-	**invite jennica both i and pierce through email**
-	i will use my network for adams
-**sean publish Volunteer form post**
-**waiting on meeting with TPSUSA to publish attendee sign up page**
-	hosting meeting inside TPUSA conference would be multiplier effect for users and contributors
-**ML good**
-**Do you want to contribute research or code?**
-	**reduce to just contact us on the ML**
-	**remove the rest**
-	discuss on the ML on the ML
-grok workspace as an option for doge teams
-	file discussion
-**sean reach out to pierce's cousin**
-**clint overview of creating doge template**
-	supabase, next good
-	keep it siimple for new github users
-	data science friendly
-	easy to create UI
-	easy to upload data sets
-	create army of researchers
-	accessable for next step of research
-	recruiting tool
-	**easy sign up, upload data, data set submission. maybe into SQL or JSON. auto analysis to convert to standard format**
-	auto search for patterns based on past examples
-	**friendly UI to just get new data sets and sources**
-	**sean shared his idea of a basic UI**
-	how to make brian and steven's research easier. they are creating hundreds of usaspending tabs for example. 
-	what are the commonalities between the states. data types. 
-	what is the easiest UI
-	**clint will share his next step shortly** 
+- **invite jennica both i and pierce through email**
+	- i will use my network for adams
+- **sean publish Volunteer form post**
+- **waiting on meeting with TPSUSA to publish attendee sign up page**
+	- hosting meeting inside TPUSA conference would be multiplier effect for users and contributors
+- **ML finished**
+- **Do you want to contribute research or code?**
+	- **reduce to just contact us on the ML**
+	- **remove the rest**
+	- discuss on the ML on the ML
+- grok workspace as an option for doge teams
+	- tea, file discussion option 
+- **sean reach out to pierce's cousin**
+- **clint overview of creating doge template**
+	- supabase, next good
+	- keep it siimple for new github users
+	- data science friendly
+	- easy to create UI
+	- easy to upload data sets
+	- create army of researchers
+	- accessable for next step of research
+	- recruiting tool
+	- **easy sign up, upload data, data set submission. - maybe into SQL or JSON. auto analysis to convert to standard format**
+	- auto search for patterns based on past examples
+	- **friendly UI to just get new data sets and sources**
+	- **sean shared his idea of a basic UI**
+	- how to make brian and steven's research easier. they are creating hundreds of usaspending tabs for example. 
+	- what are the commonalities between the states. data types. 
+	- what is the easiest UI
+	- **clint will share his next step shortly** 
