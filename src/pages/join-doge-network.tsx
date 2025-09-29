@@ -223,7 +223,10 @@ export default function JoinDogeNetwork() {
                 </div>
               </div>
 
-              <div className='card' style={{ padding: '32px', marginTop: '32px' }}>
+              <div
+                className='card'
+                style={{ padding: '32px', marginTop: '32px' }}
+              >
                 <h2
                   style={{
                     textAlign: 'center',
@@ -272,7 +275,8 @@ export default function JoinDogeNetwork() {
                         fontStyle: 'italic',
                       }}
                     >
-                      Follow our guide to set up your GitHub account and request access to the DOGE Network organization.
+                      Follow our guide to set up your GitHub account and request
+                      access to the DOGE Network organization.
                     </p>
                   </div>
 
@@ -315,7 +319,8 @@ export default function JoinDogeNetwork() {
                         fontStyle: 'italic',
                       }}
                     >
-                      If your state is missing follow the How To docs to create it!
+                      If your state is missing follow the How To docs to create
+                      it!
                     </p>
                   </div>
 
@@ -356,7 +361,8 @@ export default function JoinDogeNetwork() {
                         fontStyle: 'italic',
                       }}
                     >
-                      Follow our contribution workflow to build a website showcasing your state's government transparency research.
+                      Follow our contribution workflow to build a website
+                      showcasing your state's government transparency research.
                     </p>
                   </div>
 
@@ -397,7 +403,8 @@ export default function JoinDogeNetwork() {
                         fontStyle: 'italic',
                       }}
                     >
-                      Keep reading to continue developing your research, data, and team!
+                      Keep reading to continue developing your research, data,
+                      and team!
                     </p>
                   </div>
                 </div>
