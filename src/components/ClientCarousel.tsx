@@ -69,6 +69,15 @@ const clients: Client[] = [
     fullDescription:
       'Michigan DOGE is currently under development as part of the DOGE Network initiative.',
   },
+  {
+    name: 'The Palisades Project',
+    logo: '/img/palisades.jpg',
+    website: 'https://palisades.dogenetwork.org/',
+    summary:
+      'The Palisades area burned in January 2025. Many homes, schools and businesses were lost. Progress on rebuilding is slow. Many reasons why rebuilding progress is slow. To a parent waiting to put their lives back to normal, they do not care about the details, just rebuild their home. We want to help move the process along by highlighting the current state of the area lot by lot. We have a plan to replace the talk with with a focus on results.',
+    fullDescription:
+      'The Palisades area burned in January 2025. Many homes, schools and businesses were lost. Progress on rebuilding is slow. Many reasons why rebuilding progress is slow. To a parent waiting to put their lives back to normal, they do not care about the details, just rebuild their home. We want to help move the process along by highlighting the current state of the area lot by lot. We have a plan to replace the talk with with a focus on results.',
+  },
 ];
 
 export default function ClientCarousel() {
