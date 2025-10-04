@@ -48,10 +48,10 @@ const clients: Client[] = [
   {
     name: 'Kansas DOGE',
     logo: '/img/Flag_of_Kansas.svg',
-    website: 'https://github.com/DOGE-network',
-    summary: 'Under development',
+    website: 'https://kansas.dogenetwork.org/',
+    summary: 'Government waste and fraud exposer. Passionate aviator. We are TheFinders',
     fullDescription:
-      'Kansas DOGE is currently under development as part of the DOGE Network initiative.',
+      'Independent platform for state government transparency as part of the DOGE Network initiative.',
   },
   {
     name: 'West Virginia DOGE',
