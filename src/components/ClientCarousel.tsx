@@ -20,6 +20,15 @@ interface Client {
 
 const clients: Client[] = [
   {
+    name: 'Alladdin1983',
+    logo: '/img/alladdin1983.jpeg',
+    website: 'https://alladdin1983.dogenetwork.org/',
+    summary:
+      'Former GS13 Army Intelligence. Dedicated to revealing government spending fraud. Support my work by resharing. Visit my [Online Merch Store](https://alladdin83.com)',
+    fullDescription:
+      '',
+  },
+  {
     name: 'California DOGE',
     logo: '/img/cali-doge.png',
     website: 'https://cali-doge.org/',
