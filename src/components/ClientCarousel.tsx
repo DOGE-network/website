@@ -33,7 +33,7 @@ const clients: Client[] = [
     logo: '/img/datarepublican.png',
     website: 'https://datarepublican.com',
     summary:
-      'Billions of dollars are spent on government grants, charities, and other organizations every year. Have you ever wondered where the money is awarded or where it ends up? We're connecting the dots between government grants, charities, and drawing connections to expose where the money flows. We've found some interesting connections, and we've made the data available for you to explore.',
+      'Billions of dollars are spent on government grants, charities, and other organizations every year. Have you ever wondered where the money is awarded or where it ends up? We are connecting the dots between government grants, charities, and drawing connections to expose where the money flows. We have found some interesting connections, and we have made the data available for you to explore.',
     fullDescription:
       '',
   },
