@@ -7,7 +7,11 @@ sidebar_position: 2
 
 ## Action Items
 
-- 
+- Finalize AmericaFest rooms and meeting space
+- Share DOOD website with dropbox as raw data location
+- Get Alladdin1983 and Kansas DOGE data into DOOD
+- Analytics of are we staying on track to mission
+- Publish dMedia website to socialize dMedia/DOGE Network/DOOD organizational structure
 
 ## Meeting Information
 
@@ -29,4 +33,15 @@ sidebar_position: 2
 
 ## Notes
 
-- 
+- dood update. 
+    - invite the people investigating Terimar https://en.wikipedia.org/wiki/The_TerraMar_Project. researcher @earlgynn @asranomani to join the team
+    - i need onboard @asranomani to rebuild her site
+    - i need build the DOOD site
+    - DR integration with DOOD pending release. building DuckDB. 
+    - **dropbox as raw data location.** 
+    - upper max repo about 10GB. 
+    - steven can recreate data sources. 
+- steven talking with charlie kirk producer. maybe future collaboration possible. **we stay on mission so they can trust our work.** women do better on research than men. recruiting women research. 
+- Events starting with AmericaFest, create a pipeline of younger talent for researchers
+- hotel room block, meeting f2f. Will work with folks offline to coordinate. 
+- sean talked about dMedia to support DOOD, DOGE work. will publish dMedia site to socialize with investors and customers shortly.
