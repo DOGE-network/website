@@ -18,7 +18,12 @@
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run format:check && npm run typecheck",
-    "fix": "npm run lint:fix && npm run format"
+    "fix": "npm run lint:fix && npm run format",
+    "changelog:fetch": "./scripts/generate-changelog.sh",
+    "changelog:email": "node scripts/generate-email.js",
+    "changelog:generate": "npm run changelog:fetch && npm run changelog:email",
+    "changelog:open": "./scripts/open-email-client.sh",
+    "changelog:send": "npm run changelog:generate && npm run changelog:open"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.1",

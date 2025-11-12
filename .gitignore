@@ -7,6 +7,9 @@
 # Generated files
 .docusaurus
 .cache-loader
+changelog-data.json
+changelog-email.html
+changelog-email.txt
 
 # Misc
 .DS_Store
