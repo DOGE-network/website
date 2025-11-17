@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # DOGE Network Weekly Changelog Generator
-# Fetches PRs and commits from the last 2 weeks across all DOGE Network repositories
+# Fetches PRs and commits from the last 1 week across all DOGE Network repositories
 
 set -e
 
 # Configuration
 ORG="DOGE-network"
-DAYS_BACK=14
+DAYS_BACK=7
 OUTPUT_FILE="changelog-data.json"
 GITHUB_API="https://api.github.com"
 
@@ -30,7 +30,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --month: Month number (1-12), optional"
             echo "  --year: Year (e.g., 2025), optional"
             echo "  If both month and year are provided, fetches data for that month"
-            echo "  Otherwise, defaults to last 14 days"
+            echo "  Otherwise, defaults to last 7 days"
             exit 1
             ;;
     esac
@@ -102,7 +102,7 @@ if [ -n "$MONTH" ] && [ -n "$YEAR" ]; then
     fi
     DATE_RANGE_DESC="${YEAR}-$(printf "%02d" $MONTH)"
 else
-    # Default: last 14 days
+    # Default: last 7 days
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
         SINCE_DATE=$(date -v-${DAYS_BACK}d -u +"%Y-%m-%dT%H:%M:%SZ")
